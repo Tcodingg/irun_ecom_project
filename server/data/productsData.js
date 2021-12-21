@@ -138,3 +138,5 @@ const products = [
       gender: "female",
    },
 ];
+
+module.exports = products;
