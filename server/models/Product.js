@@ -3,12 +3,13 @@ const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema({
    title: String,
    details: String,
+   price: Number,
    description: String,
    images: [String],
    inStock: Number,
-   returnPolicy: String,
+   generalInfo: String,
 });
 
-const product = mongoose.model("product", productSchema);
+const Product = mongoose.model("product", productSchema);
 
-module.exports = product;
+module.exports = Product;
