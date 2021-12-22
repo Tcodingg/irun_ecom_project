@@ -48,3 +48,30 @@
       }
    }
 }
+
+@media only screen and (min-width: 800px) {
+   .home {
+      .main-container {
+         max-width: 1200px;
+         margin: auto;
+         display: flex;
+         flex-direction: row;
+
+         background-color: red;
+         .main-info {
+            flex-grow: 1;
+            width: 50%;
+         }
+         .img-banner {
+            width: 50%;
+
+            grid-row: 1;
+            img {
+               width: 100%;
+               max-width: 400px;
+               scale: 0.7;
+            }
+         }
+      }
+   }
+}
