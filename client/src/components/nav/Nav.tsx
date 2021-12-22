@@ -1,5 +1,7 @@
 import React from "react";
 import "./Nav.scss";
+
+import { RiShoppingBagLine } from "react-icons/ri";
 const Nav: React.FC = () => {
    return (
       <nav>
@@ -10,12 +12,16 @@ const Nav: React.FC = () => {
                </h1>
             </div>
             <div className="nav-right-content">
-               <div className="burger-icon-container"></div>
-               <div className="cart-icon-wrapper"></div>
+               <div className="cart-icon-wrapper">
+                  <RiShoppingBagLine />
+               </div>
                <ul className="menu">
                   <li>shop</li>
                   <li>support</li>
                </ul>
+               <div className="burger-icon-container">
+                  <div className="burger"></div>
+               </div>
             </div>
          </div>
       </nav>

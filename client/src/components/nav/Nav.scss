@@ -1,0 +1,71 @@
+@use "../../index";
+nav {
+   border: 1px solid black;
+   .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .nav-left-content h1 {
+         span {
+            color: red;
+         }
+      }
+      .nav-right-content {
+         display: flex;
+         align-items: center;
+         gap: index.$mg-3;
+         font-size: index.$text-font-size;
+         .burger-icon-container {
+            // width: 30px;
+            // height: 30px;
+            // border: 1px solid black;
+
+            // display: flex;
+            // background-color: green;
+            display: none;
+            width: 25px;
+            height: 25px;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 700px) {
+   nav {
+      .nav-container {
+         .nav-right-content {
+            .burger-icon-container {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               position: relative;
+               &:hover {
+                  cursor: pointer;
+               }
+
+               .burger {
+                  width: 100%;
+                  height: 1.5px;
+                  //   background-color: black;
+                  &:before {
+                     content: "";
+                     position: absolute;
+                     width: 100%;
+                     height: 1.5px;
+                     background-color: black;
+                     transform: translateY(3px);
+                  }
+                  &:after {
+                     content: "";
+                     position: absolute;
+                     width: 100%;
+                     height: 1.5px;
+                     background-color: black;
+                     transform: translateY(-3px);
+                  }
+               }
+            }
+         }
+      }
+   }
+}
