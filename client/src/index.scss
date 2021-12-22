@@ -8,6 +8,10 @@
 body {
    font-family: "Poppins", sans-serif;
 }
+// ==== breaking points ==== //
+$mobile-breaking-point: 375px;
+$ipad-breaking-point: 800px;
+$laptop-breaking-point: 1200px;
 
 //====colors ====//
 $primary-color: #212529;
