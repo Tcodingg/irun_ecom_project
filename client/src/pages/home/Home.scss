@@ -44,17 +44,17 @@
          display: flex;
          flex-direction: column;
          gap: index.$mg-2;
-         text-align: left;
+         text-align: center;
          h1 {
             font-size: 48px;
             text-transform: uppercase;
             text-align: left;
             line-height: 0.8;
+            text-align: center;
          }
          a {
             background-color: index.$primary-color;
-
-            color: white;
+            margin: auto;
             width: fit-content;
 
             text-align: center;
@@ -105,6 +105,15 @@
          }
          .img-banner {
             margin-right: index.$mg-2;
+         }
+      }
+      .collection {
+         .collection-title {
+            h1 {
+               font-size: 72px;
+               max-width: 600px;
+               margin: auto;
+            }
          }
       }
    }
