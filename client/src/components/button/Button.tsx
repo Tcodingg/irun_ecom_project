@@ -5,19 +5,22 @@ import "./Button.scss";
 interface btnTypes {
    text: string;
    url?: string;
-   bgColor: string;
+
    txtColor: string;
 }
-const Button: React.FC<btnTypes> = ({ text, url, bgColor, txtColor }) => {
+const Button: React.FC<btnTypes> = ({ text, url, txtColor }) => {
    return (
-      <div className="btn-container">
-         <a
-            href={url}
-            style={{ background: `${bgColor}`, color: `${txtColor}` }}
-         >
-            {text}
-         </a>
-      </div>
+      <a
+         className="reusable-btn"
+         href={url}
+         style={{
+            color: `${txtColor}`,
+            cursor: "pointer",
+            transition: "all 0.3s ease-out",
+         }}
+      >
+         {text}
+      </a>
    );
 };
 

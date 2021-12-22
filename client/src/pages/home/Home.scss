@@ -9,18 +9,10 @@
          background-color: #f2f2f2;
          padding: 50px;
          text-align: left;
+
          a {
-            width: fit-content;
-            text-decoration: none;
-            border: 2px solid index.$primary-color;
-            padding: 3px 8px;
-            margin-top: index.$mg-2;
-            color: white;
             background-color: index.$primary-color;
-            border-radius: 20px;
-            text-transform: capitalize;
-            font-weight: index.$font-weight-medium;
-            transition: all 0.3s ease-out;
+            margin-top: 20px;
             &:hover {
                background-color: black;
             }
@@ -60,13 +52,11 @@
             line-height: 0.8;
          }
          a {
-            text-decoration: none;
             background-color: index.$primary-color;
-            text-transform: capitalize;
-            padding: index.$mg-1 index.$mg-3;
+
             color: white;
             width: fit-content;
-            border-radius: 20px;
+
             text-align: center;
             &:hover {
                background-color: black;

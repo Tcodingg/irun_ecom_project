@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../components/button/Button";
 import "./Home.scss";
 
 const Home: React.FC = () => {
@@ -12,7 +13,8 @@ const Home: React.FC = () => {
                   with all the events. You can see and feel everything in
                   clothes. Start shopping now to enjoy exclusive offers!
                </p>
-               <a href="##">shop now</a>
+
+               <Button text="shop now" txtColor="white" />
             </div>
             <div className="img-banner bd-container">
                <img src="images/running-banner1.png" alt="" />
@@ -22,7 +24,7 @@ const Home: React.FC = () => {
             <div className="collection-title">
                <h1>change the trajectory</h1>
                <p>Define our way forward with Huarache.</p>
-               <a href="##">shop</a>
+               <Button text="shop" txtColor="white" />
             </div>
          </section>
       </section>
