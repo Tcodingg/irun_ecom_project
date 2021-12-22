@@ -1,4 +1,4 @@
-import "./App.sass";
+import "./App.scss";
 import Nav from "./components/nav/Nav";
 
 function App() {

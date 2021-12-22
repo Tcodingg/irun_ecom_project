@@ -35,18 +35,18 @@ $mg-5: 2.5rem;
 $mg-6: 3rem;
 
 .title {
-   font-size: $title-font;
+   font-size: $title-font-size;
    color: $primary-color;
    font-weight: $font-weight-medium;
 }
 .sub-title {
-   font-size: $sub-font-size;
+   font-size: $sub-title-font-size;
    color: $primary-color;
    font-weight: $font-weight-normal;
 }
 
 .text {
-   font-size: $text-font;
+   font-size: $text-font-size;
    color: $primary-color;
    font-weight: $font-weight-normal;
    line-height: $mg-3;
