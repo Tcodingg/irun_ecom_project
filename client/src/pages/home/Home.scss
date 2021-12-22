@@ -27,7 +27,7 @@
          }
          h1 {
             font-size: 2.1rem;
-            text-transform: capitalize;
+            text-transform: uppercase;
          }
          display: flex;
          flex-direction: column;
@@ -56,11 +56,15 @@
          margin: auto;
          display: flex;
          flex-direction: row;
+         height: calc(100vh - 3.5rem);
 
-         background-color: red;
          .main-info {
             flex-grow: 1;
             width: 50%;
+            height: auto;
+            h1 {
+               font-size: 2.7rem;
+            }
          }
          .img-banner {
             width: 50%;
