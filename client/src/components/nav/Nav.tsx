@@ -14,15 +14,12 @@ const Nav: React.FC = () => {
                </a>
             </div>
             <div className="nav-right-content">
-               <div className="cart-icon-wrapper">
-                  <RiShoppingBagLine />
-               </div>
-               <div
-                  className="menu"
-                  style={{ maxHeight: isOpen ? "200px" : "0px" }}
-               >
+               <div className={`menu ${isOpen ? "isOpen" : ""}`}>
                   <li>shop</li>
                   <li>support</li>
+               </div>
+               <div className="cart-icon-wrapper">
+                  <RiShoppingBagLine />
                </div>
                <div
                   onClick={() => setIsOpen((preVal) => !preVal)}
