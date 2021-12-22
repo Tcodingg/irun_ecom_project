@@ -79,3 +79,16 @@
       }
    }
 }
+
+@media (min-width: 1200px) {
+   .home {
+      .main-container {
+         .main-info {
+            margin-left: index.$mg-2;
+         }
+         .img-banner {
+            margin-right: index.$mg-2;
+         }
+      }
+   }
+}
