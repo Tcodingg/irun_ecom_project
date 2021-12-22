@@ -1,0 +1,5 @@
+@use "../../index.scss";
+.btn-container a {
+   text-decoration: none;
+   padding: index.$mg-1 index.$mg-3;
+}

@@ -18,6 +18,13 @@ const Home: React.FC = () => {
                <img src="images/running-banner1.png" alt="" />
             </div>
          </main>
+         <section className="bd-container section collection">
+            <div className="collection-title">
+               <h1>change the trajectory</h1>
+               <p>Define our way forward with Huarache.</p>
+               <a href="##">shop</a>
+            </div>
+         </section>
       </section>
    );
 };

@@ -47,6 +47,33 @@
          padding: index.$mg-2;
       }
    }
+   .collection {
+      .collection-title {
+         display: flex;
+         flex-direction: column;
+         gap: index.$mg-2;
+         text-align: left;
+         h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            text-align: left;
+            line-height: 0.8;
+         }
+         a {
+            text-decoration: none;
+            background-color: index.$primary-color;
+            text-transform: capitalize;
+            padding: index.$mg-1 index.$mg-3;
+            color: white;
+            width: fit-content;
+            border-radius: 20px;
+            text-align: center;
+            &:hover {
+               background-color: black;
+            }
+         }
+      }
+   }
 }
 
 @media only screen and (min-width: 800px) {
