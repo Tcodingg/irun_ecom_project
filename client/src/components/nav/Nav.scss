@@ -51,7 +51,6 @@ nav {
       .nav-container {
          .nav-right-content {
             .menu {
-               transition: all 0.3s ease-out;
                max-height: 0px;
                &.isOpen {
                   max-height: 200px;
@@ -81,7 +80,6 @@ nav {
                      height: 1.5px;
                      background-color: black;
                      transform: translateY(3px);
-                     transition: all 0.35s ease-in-out;
                   }
                   &:after {
                      content: "";
@@ -90,7 +88,6 @@ nav {
                      height: 1.5px;
                      background-color: black;
                      transform: translateY(-3px);
-                     transition: all 0.35s ease-in-out;
                   }
                }
             }
