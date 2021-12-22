@@ -15,7 +15,8 @@ node_modules/
 build/
 server/images
 /server/images
-/notes.txt
+notes
+
 
 
 # misc

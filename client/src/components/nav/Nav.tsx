@@ -1,26 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.scss";
 
 import { RiShoppingBagLine } from "react-icons/ri";
 const Nav: React.FC = () => {
+   const [isOpen, setIsOpen] = useState(false);
+
    return (
       <nav>
          <div className="bd-container nav-container">
             <div className="nav-left-content">
-               <h1>
+               <a className="title" href="##">
                   iRun<span>.</span>
-               </h1>
+               </a>
             </div>
             <div className="nav-right-content">
                <div className="cart-icon-wrapper">
                   <RiShoppingBagLine />
                </div>
-               <div className="menu">
+               <div
+                  className="menu"
+                  style={{ maxHeight: isOpen ? "200px" : "0px" }}
+               >
                   <li>shop</li>
                   <li>support</li>
                </div>
-               <div className="burger-icon-container">
-                  <div className="burger"></div>
+               <div
+                  onClick={() => setIsOpen((preVal) => !preVal)}
+                  className="burger-icon-container"
+               >
+                  <div className={`burger ${isOpen ? "isOpen" : ""}`}></div>
                </div>
             </div>
          </div>
