@@ -15,10 +15,10 @@ const Nav: React.FC = () => {
                <div className="cart-icon-wrapper">
                   <RiShoppingBagLine />
                </div>
-               <ul className="menu">
+               <div className="menu">
                   <li>shop</li>
                   <li>support</li>
-               </ul>
+               </div>
                <div className="burger-icon-container">
                   <div className="burger"></div>
                </div>
