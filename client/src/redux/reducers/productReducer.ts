@@ -43,5 +43,7 @@ export const productReducer = (
             ...state,
             err: action.payload,
          };
+      default:
+         return state;
    }
 };

@@ -4,7 +4,7 @@ import { product } from "../actions/actionTypes.";
 interface interfaceState {
    loading: boolean;
    products: product[];
-   err?: string;
+   err?: String;
 }
 
 let initialState: interfaceState = {
@@ -15,7 +15,7 @@ let initialState: interfaceState = {
 export const productsReducer = (
    state: interfaceState = initialState,
    action: Actions
-) => {
+): interfaceState => {
    switch (action.type) {
       case actionTypes.GET_ALL_PRODUCTS_LOADING:
          return {

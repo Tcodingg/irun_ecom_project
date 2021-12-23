@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../../redux/actions/actionsFetchProducts";
+
 import Button from "../../components/button/Button";
 import "./Home.scss";
+import { RootState } from "../../redux/rootReducer";
 
 const Home: React.FC = () => {
+   const dispatch = useDispatch();
+
+   const { products } = useSelector(
+      (state: RootState) => state.productsReducer
+   );
+
+   useEffect(() => {
+      dispatch(getAllProducts());
+   }, [dispatch]);
+
    return (
       <section className="home">
          <main className="main-container">
