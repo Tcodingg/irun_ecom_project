@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
+import { localStore } from "./redux/store";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
-   <App />,
-
+   <Provider store={localStore}>
+      <App />
+   </Provider>,
    document.getElementById("root")
 );
 
