@@ -34,13 +34,35 @@ const Home: React.FC = () => {
                <img src="images/running-banner1.png" alt="" />
             </div>
          </main>
-         <section className="bd-container section collection">
+         <div className="bd-container section collection">
             <div className="collection-title">
                <h1>change the trajectory</h1>
                <p className="text">Define our way forward with Huarache.</p>
                <Button text="shop" txtColor="white" />
             </div>
-         </section>
+         </div>
+         <div className="collection-container">
+            {/* title price gender */}
+            <section className="product-list">
+               {products.map(({ title, price, gender, _id, images }) => {
+                  if (gender === "male")
+                     return (
+                        <div key={_id}>
+                           <img src={images[0]} alt="" />
+                           <div>
+                              <p className="sub-title">{title}</p>
+                              <p>{price}</p>
+                           </div>
+                           <p>
+                              {gender === "male"
+                                 ? "Men's Shoes"
+                                 : "Women's Shoes"}
+                           </p>
+                        </div>
+                     );
+               })}
+            </section>
+         </div>
       </section>
    );
 };

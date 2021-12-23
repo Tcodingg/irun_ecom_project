@@ -9,15 +9,15 @@ export enum actionTypes {
    REMOVE_FROM_CART = "REMOVE_FROM_CART",
 }
 export interface product {
-   title: String;
-   details: String;
+   title: string;
+   details: string;
    price: Number;
-   description: String;
-   images: String[];
+   description: string;
+   images: string[];
    inStock: Number;
-   generalInfo: String;
-   gender: String;
-   _id: String;
+   generalInfo: string;
+   gender: string;
+   _id: string;
 }
 
 type actionAllProductsLoading = {
