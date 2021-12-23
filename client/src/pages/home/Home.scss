@@ -63,6 +63,12 @@
             }
          }
       }
+      .collection-container {
+         margin-top: 20px;
+         display: flex;
+         flex-direction: column;
+         gap: index.$mg-3;
+      }
    }
 }
 

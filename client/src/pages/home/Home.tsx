@@ -1,17 +1,14 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getAllProducts } from "../../redux/actions/actionsFetchProducts";
 
 import Button from "../../components/button/Button";
 import "./Home.scss";
-import { RootState } from "../../redux/rootReducer";
+
+import Products from "../../components/products/Products";
 
 const Home: React.FC = () => {
    const dispatch = useDispatch();
-
-   const { products } = useSelector(
-      (state: RootState) => state.productsReducer
-   );
 
    useEffect(() => {
       dispatch(getAllProducts());
@@ -40,28 +37,9 @@ const Home: React.FC = () => {
                <p className="text">Define our way forward with Huarache.</p>
                <Button text="shop" txtColor="white" />
             </div>
-         </div>
-         <div className="collection-container">
-            {/* title price gender */}
-            <section className="product-list">
-               {products.map(({ title, price, gender, _id, images }) => {
-                  if (gender === "male")
-                     return (
-                        <div key={_id}>
-                           <img src={images[0]} alt="" />
-                           <div>
-                              <p className="sub-title">{title}</p>
-                              <p>{price}</p>
-                           </div>
-                           <p>
-                              {gender === "male"
-                                 ? "Men's Shoes"
-                                 : "Women's Shoes"}
-                           </p>
-                        </div>
-                     );
-               })}
-            </section>
+            <div className="collection-container ">
+               <Products />
+            </div>
          </div>
       </section>
    );
