@@ -33,7 +33,7 @@ type actionAllProductsFail = {
 };
 
 type actionGetProductLoading = {
-   type: actionTypes.GET_PRODUCT_SUCCESS;
+   type: actionTypes.GET_PRODUCT_LOADING;
 };
 
 type actionGetProductSuccess = {
@@ -46,8 +46,8 @@ type actionGetProductFAil = {
 };
 
 export type Actions =
-   | actionAllProductsSuccess
    | actionAllProductsLoading
+   | actionAllProductsSuccess
    | actionAllProductsFail
    | actionGetProductLoading
    | actionGetProductSuccess

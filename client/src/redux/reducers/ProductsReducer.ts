@@ -34,5 +34,7 @@ export const productsReducer = (
             loading: false,
             err: action.payload,
          };
+      default:
+         return state;
    }
 };
