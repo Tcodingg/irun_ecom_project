@@ -29,7 +29,7 @@ type actionAllProductsSuccess = {
 };
 type actionAllProductsFail = {
    type: actionTypes.GET_ALL_PRODUCTS_FAIL;
-   payload: String;
+   payload: string;
 };
 
 type actionGetProductLoading = {
@@ -42,7 +42,7 @@ type actionGetProductSuccess = {
 };
 type actionGetProductFAil = {
    type: actionTypes.GET_PRODUCT_FAIL;
-   payload: String;
+   payload: string;
 };
 
 export type Actions =

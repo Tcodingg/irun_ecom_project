@@ -1,11 +1,11 @@
-import { actionTypes } from "./actionTypes.";
+import { Actions, actionTypes } from "./actionTypes.";
 import { Dispatch } from "redux";
 import axios from "axios";
 
 const url: any = process.env.REACT_APP_SERVER_URL;
 // ==== GET ALL PRODUCTS ==== //
 
-export const getAllProducts = () => async (dispatch: Dispatch) => {
+export const getAllProducts = () => async (dispatch: Dispatch<Actions>) => {
    dispatch({
       type: actionTypes.GET_ALL_PRODUCTS_LOADING,
    });
@@ -17,7 +17,7 @@ export const getAllProducts = () => async (dispatch: Dispatch) => {
       });
 
       console.log(data);
-   } catch (error) {
+   } catch (error: any) {
       dispatch({
          type: actionTypes.GET_ALL_PRODUCTS_FAIL,
          payload: error,
@@ -27,21 +27,25 @@ export const getAllProducts = () => async (dispatch: Dispatch) => {
 
 //   GET A PRODUCT
 
-export const getProduct = (id: string) => async (dispatch: Dispatch) => {
-   dispatch({
-      type: actionTypes.GET_PRODUCT_LOADING,
-   });
+interface productId {
+   id: string | undefined;
+}
+export const getProduct =
+   (id: productId) => async (dispatch: Dispatch<Actions>) => {
+      dispatch({
+         type: actionTypes.GET_PRODUCT_LOADING,
+      });
 
-   try {
-      const { data } = await axios.get(`${url}/api/products/${id}`);
-      dispatch({
-         type: actionTypes.GET_PRODUCT_SUCCESS,
-         payload: data,
-      });
-   } catch (error) {
-      dispatch({
-         type: actionTypes.GET_ALL_PRODUCTS_FAIL,
-         payload: error,
-      });
-   }
-};
+      try {
+         const { data } = await axios.get(`${url}/api/products/${id}`);
+         dispatch({
+            type: actionTypes.GET_PRODUCT_SUCCESS,
+            payload: data,
+         });
+      } catch (error: any) {
+         dispatch({
+            type: actionTypes.GET_PRODUCT_FAIL,
+            payload: error,
+         });
+      }
+   };

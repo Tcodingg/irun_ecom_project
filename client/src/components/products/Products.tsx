@@ -1,6 +1,7 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../redux/rootReducer";
+import { Link } from "react-router-dom";
 
 import "./Products.scss";
 
@@ -13,7 +14,7 @@ const Products: React.FC = () => {
          {products.map(({ title, price, gender, _id, images }) => {
             return (
                <div className="product" key={_id}>
-                  <a href="##">
+                  <Link to={`/product/${_id}`}>
                      <img src={images[0]} alt="" />
                      <div className="product-details">
                         <div className="product-info">
@@ -22,7 +23,7 @@ const Products: React.FC = () => {
                         </div>
                         <p className="text price">${price}</p>
                      </div>
-                  </a>
+                  </Link>
                </div>
             );
          })}

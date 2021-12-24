@@ -41,6 +41,27 @@ const Home: React.FC = () => {
                <Products />
             </div>
          </div>
+         <div className="bd-container trending">
+            <p className="text">trending</p>
+            <div className="trending-container">
+               <div className="trending-left-content">
+                  <img src="/images/banner_2.jpg" alt="" />
+                  <div className="trending-content">
+                     <p className="text">indoor running shoes</p>
+                     <Button text="shop now" txtColor="black" />
+                  </div>
+               </div>
+               <div className="trending-left-content">
+                  <div className="trending-right-content">
+                     <img src="/images/banner_3.jpg" alt="" />
+                     <div className="trending-content">
+                        <p className="text">outdoor running shoes</p>
+                        <Button text="shop now" txtColor="black" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
    );
 };
