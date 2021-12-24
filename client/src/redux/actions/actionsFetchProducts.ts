@@ -28,7 +28,7 @@ export const getAllProducts = () => async (dispatch: Dispatch<Actions>) => {
 //   GET A PRODUCT
 
 export const getProduct =
-   (id: string) => async (dispatch: Dispatch<Actions>) => {
+   (id: string | undefined) => async (dispatch: Dispatch<Actions>) => {
       dispatch({
          type: actionTypes.GET_PRODUCT_LOADING,
       });

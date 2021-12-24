@@ -1,11 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/rootReducer";
 import { Link } from "react-router-dom";
 
 import "./Products.scss";
+import { getProduct } from "../../redux/actions/actionsFetchProducts";
 
 const Products: React.FC = () => {
+   const dispatch = useDispatch();
    const { products } = useSelector(
       (state: RootState) => state.productsReducer
    );
@@ -14,7 +16,10 @@ const Products: React.FC = () => {
          {products.map(({ title, price, gender, _id, images }) => {
             return (
                <div className="product" key={_id}>
-                  <Link to={`/product/${_id}`}>
+                  <Link
+                     onClick={() => dispatch(getProduct(_id))}
+                     to={`/product/${_id}`}
+                  >
                      <img src={images[0]} alt="" />
                      <div className="product-details">
                         <div className="product-info">
