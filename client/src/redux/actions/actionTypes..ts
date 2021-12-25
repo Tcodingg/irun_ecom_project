@@ -14,7 +14,7 @@ export interface product {
    price: Number;
    description: string;
    images: string[];
-   inStock: Number;
+   inStock: number;
    generalInfo: string;
    gender: string;
    _id: string;

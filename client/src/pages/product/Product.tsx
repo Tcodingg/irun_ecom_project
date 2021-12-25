@@ -14,7 +14,7 @@ const Product: React.FC = () => {
    const product = useSelector(
       (state: RootState) => state.productReducer.product
    );
-
+   console.log(product);
    useEffect(() => {
       dispatch(getProduct(id));
    }, [id, dispatch]);
@@ -32,10 +32,9 @@ const Product: React.FC = () => {
                   <p className="text price">{`$${product.price}`}</p>
                   <div className="btn-qty-container">
                      <select name="qty" id="">
-                        <option value="1">1</option>
-                        <option value="1">1</option>
-                        <option value="1">1</option>
-                        <option value="1">1</option>
+                        {Array.from(Array(product.inStock).keys()).map((x) => {
+                           return <option value={x + 1}>{x + 1}</option>;
+                        })}
                      </select>
                      <button>add to cart</button>
                   </div>
