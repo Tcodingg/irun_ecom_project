@@ -6,7 +6,6 @@ import { getProduct } from "../../redux/actions/actionsFetchProducts";
 
 import "./Product.scss";
 import ProductSlides from "../../components/ProductSlides/ProductSlides";
-import Button from "../../components/button/Button";
 
 const Product: React.FC = () => {
    const dispatch = useDispatch();
@@ -24,15 +23,38 @@ const Product: React.FC = () => {
       <section className="product">
          <div className="bd-container product-container">
             <div className="product-wrapper">
-               <div>
+               <div className="product-images">
                   <ProductSlides images={product.images} />
                </div>
-               <div>
-                  <p className="text">
-                     {product.title}
-                     <p>{`$${product.price}`}</p>
+               <div className="product-info-container">
+                  <p className=" title">{product.title}</p>
+                  <p className="text">{product.details}</p>
+                  <p className="text price">{`$${product.price}`}</p>
+                  <div className="btn-qty-container">
+                     <select name="qty" id="">
+                        <option value="1">1</option>
+                        <option value="1">1</option>
+                        <option value="1">1</option>
+                        <option value="1">1</option>
+                     </select>
                      <button>add to cart</button>
-                  </p>
+                  </div>
+                  <div className="general-info">
+                     <div className="general-info-wrapper">
+                        <div>
+                           <p className="sub-title">product details</p>
+                           <button>+</button>
+                        </div>
+                        <p className="text">{product.description}</p>
+                     </div>
+                     <div className="general-info-wrapper">
+                        <div>
+                           <p className="sub-title">free delivery and return</p>
+                           <button>+</button>
+                        </div>
+                        <p className="text">{product.generalInfo}</p>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
