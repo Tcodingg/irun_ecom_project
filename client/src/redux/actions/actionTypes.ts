@@ -19,7 +19,7 @@ export interface product {
    gender: string;
    _id: string;
 }
-
+// === actions types for all products
 type actionAllProductsLoading = {
    type: actionTypes.GET_ALL_PRODUCTS_LOADING;
 };
@@ -32,6 +32,7 @@ type actionAllProductsFail = {
    payload: string;
 };
 
+// === actions types for single product
 type actionGetProductLoading = {
    type: actionTypes.GET_PRODUCT_LOADING;
 };
@@ -42,6 +43,18 @@ type actionGetProductSuccess = {
 };
 type actionGetProductFAil = {
    type: actionTypes.GET_PRODUCT_FAIL;
+   payload: string;
+};
+
+// === actions types for cart
+
+type actionAddToCart = {
+   type: actionTypes.ADD_TO_CART;
+   payload: product;
+};
+
+type actionRemoveFromCart = {
+   type: actionTypes.REMOVE_FROM_CART;
    payload: string;
 };
 
