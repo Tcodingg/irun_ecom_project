@@ -17,8 +17,10 @@
                   background-color: black;
                   color: white;
                   padding: 0.5rem 1rem;
-                  text-transform: uppercase;
+                  font-weight: 500;
+                  text-transform: capitalize;
                   transition: all 0.3s ease-out;
+                  font-family: "Poppins", sans-serif;
                   &:hover {
                      cursor: pointer;
                      background-color: rgba(0, 0, 0, 0.801);

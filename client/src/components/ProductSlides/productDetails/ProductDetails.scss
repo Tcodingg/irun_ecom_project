@@ -27,6 +27,9 @@
          align-items: center;
          color: white;
          background-color: black;
+         &:hover {
+            cursor: pointer;
+         }
       }
    }
 }
