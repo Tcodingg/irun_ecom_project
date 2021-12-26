@@ -53,6 +53,19 @@ type actionAddToCart = {
    payload: product;
 };
 
+export interface cartItems {
+   title: string;
+   details: string;
+   price: Number;
+   description: string;
+   images: string[];
+   inStock: number;
+   generalInfo: string;
+   gender: string;
+   _id: string;
+   qty: number;
+}
+
 type actionRemoveFromCart = {
    type: actionTypes.REMOVE_FROM_CART;
    payload: string;
@@ -64,4 +77,6 @@ export type Actions =
    | actionAllProductsFail
    | actionGetProductLoading
    | actionGetProductSuccess
-   | actionGetProductFAil;
+   | actionGetProductFAil
+   | actionAddToCart
+   | actionRemoveFromCart;

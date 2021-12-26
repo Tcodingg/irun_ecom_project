@@ -7,6 +7,7 @@ import { getProduct } from "../../redux/actions/actionsFetchProducts";
 import "./Product.scss";
 import ProductSlides from "../../components/ProductSlides/ProductSlides";
 import ProductDetails from "../../components/ProductSlides/productDetails/ProductDetails";
+import { addToCart } from "../../redux/actions/actionCart";
 
 const Product: React.FC = () => {
    const dispatch = useDispatch();
@@ -37,7 +38,9 @@ const Product: React.FC = () => {
                            return <option value={x + 1}>{x + 1}</option>;
                         })}
                      </select>
-                     <button>add to cart</button>
+                     <button onClick={() => dispatch(addToCart(product))}>
+                        add to cart
+                     </button>
                   </div>
                   <div className="general-info">
                      <ProductDetails

@@ -3,6 +3,7 @@ import { actionTypes, product } from "./actionTypes";
 // add to cart
 
 export const addToCart = (item: product) => async (dispatch: Dispatch) => {
+   console.log(item);
    dispatch({
       type: actionTypes.ADD_TO_CART,
       payload: item,
