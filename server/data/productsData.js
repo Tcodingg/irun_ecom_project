@@ -11,7 +11,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/i2ciwiog27utsocvsl8o/revolution-5-road-running-shoes-RNxmvG.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/oas6ifj7ek6erbiluwan/revolution-5-road-running-shoes-RNxmvG.png",
       ],
-      isStock: 10,
+      inStock: 10,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "male",
@@ -28,7 +28,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9f904ace-f4a0-4975-916b-f62780c2a6ee/air-zoom-terra-kiger-7-trail-running-shoes-PFRMNz.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/93bf9135-e84f-48fe-aea1-34c1b4008e50/air-zoom-terra-kiger-7-trail-running-shoes-PFRMNz.png",
       ],
-      isStock: 5,
+      inStock: 5,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "male",
@@ -45,7 +45,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/znal7qdgcqkgvarq0iww/zoom-mamba-3-distance-spike-XPTbxzmO.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/od7ciuwdanhvr1li55hh/zoom-mamba-3-distance-spike-XPTbxzmO.png",
       ],
-      isStock: 10,
+      inStock: 10,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "male",
@@ -62,7 +62,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/37c062b0-96dd-461d-9ef2-8581b482d477/zoom-rival-s-9-athletics-sprinting-spikes-W2jlBw.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/1470134a-0ef2-4171-81a0-6e834b3c352c/zoom-rival-s-9-athletics-sprinting-spikes-W2jlBw.png",
       ],
-      isStock: 3,
+      inStock: 3,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "male",
@@ -81,7 +81,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/494dc794-fcae-492c-b03d-082c4492d011/flex-experience-run-10-road-running-shoes-jk3h62.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/834cf08e-b450-4416-ac16-4f598ffbb26d/flex-experience-run-10-road-running-shoes-jk3h62.png",
       ],
-      isStock: 3,
+      inStock: 3,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "female",
@@ -98,7 +98,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2d8244d7-bddf-43e3-afea-28ccbb0b78e1/custom-nike-air-zoom-pegasus-38-by-you.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7956cc54-0639-4faa-81c4-ed764fd3e2a1/custom-nike-air-zoom-pegasus-38-by-you.png",
       ],
-      isStock: 6,
+      inStock: 6,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "female",
@@ -115,7 +115,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2f0b8503-c6f2-49e9-84f6-fd441aa80a59/custom-nike-internationalist-low-by-you.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8ac969e2-c483-4fd8-a651-bc1a325d3e18/custom-nike-internationalist-low-by-you.png",
       ],
-      isStock: 8,
+      inStock: 8,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "female",
@@ -132,7 +132,7 @@ const products = [
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8a34838e-8a80-4618-bf1c-c029265d7f5d/air-zoom-structure-23-road-running-shoes-rn2NcN.png",
          "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f3a1c5bd-9101-4f06-ba87-bf7bd9832bc2/air-zoom-structure-23-road-running-shoes-rn2NcN.png",
       ],
-      isStock: 6,
+      inStock: 6,
       generalInfo:
          "Free standard delivery on orders over $175. Delivery may take longer than normal. Check your estimated delivery date at checkout. You can return your order for any reason, free of charge, within 60 days.",
       gender: "female",

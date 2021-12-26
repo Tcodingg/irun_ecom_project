@@ -6,6 +6,7 @@ import { getProduct } from "../../redux/actions/actionsFetchProducts";
 
 import "./Product.scss";
 import ProductSlides from "../../components/ProductSlides/ProductSlides";
+import ProductDetails from "../../components/ProductSlides/productDetails/ProductDetails";
 
 const Product: React.FC = () => {
    const dispatch = useDispatch();
@@ -39,20 +40,14 @@ const Product: React.FC = () => {
                      <button>add to cart</button>
                   </div>
                   <div className="general-info">
-                     <div className="general-info-wrapper">
-                        <div>
-                           <p className="sub-title">product details</p>
-                           <button>+</button>
-                        </div>
-                        <p className="text">{product.description}</p>
-                     </div>
-                     <div className="general-info-wrapper">
-                        <div>
-                           <p className="sub-title">free delivery and return</p>
-                           <button>+</button>
-                        </div>
-                        <p className="text">{product.generalInfo}</p>
-                     </div>
+                     <ProductDetails
+                        title="product details"
+                        description={product.description}
+                     />
+                     <ProductDetails
+                        title="free delivery and return"
+                        description={product.generalInfo}
+                     />
                   </div>
                </div>
             </div>
