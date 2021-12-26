@@ -88,4 +88,5 @@ export type Actions =
    | actionGetProductSuccess
    | actionGetProductFAil
    | actionAddToCart
-   | actionRemoveFromCart;
+   | actionRemoveFromCart
+   | actionAdjustQty;

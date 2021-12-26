@@ -25,6 +25,20 @@ export const cartReducer = (
                  )
                : [...state.cart, { ...action.payload, qty: 1 }],
          };
+      case actionTypes.REMOVE_FROM_CART:
+         return {
+            ...state,
+            cart: state.cart.filter((item) => item._id !== action.payload),
+         };
+      case actionTypes.ADJUST_QTY_CART:
+         return {
+            ...state,
+            cart: state.cart.map((item) =>
+               item._id === action.payload.id
+                  ? { ...item, qty: action.payload.id }
+                  : item
+            ),
+         };
       default:
          return state;
    }
