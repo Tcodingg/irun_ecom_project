@@ -7,6 +7,7 @@ export enum actionTypes {
    GET_PRODUCT_FAIL = "GET_PRODUCT_FAIL",
    ADD_TO_CART = "ADD_TO_CART",
    REMOVE_FROM_CART = "REMOVE_FROM_CART",
+   ADJUST_QTY_CART = "ADJUST_QTY_CART",
 }
 export interface product {
    title: string;
@@ -69,6 +70,14 @@ export interface cartItems {
 type actionRemoveFromCart = {
    type: actionTypes.REMOVE_FROM_CART;
    payload: string;
+};
+
+type actionAdjustQty = {
+   type: actionTypes.ADJUST_QTY_CART;
+   payload: {
+      id: string;
+      qty: number;
+   };
 };
 
 export type Actions =
