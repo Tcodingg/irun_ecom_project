@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import Button from "../../components/button/Button";
 import CartItem from "../../components/cartItem/CartItem";
 import { RootState } from "../../redux/rootReducer";
 import "./Cart.scss";
@@ -26,19 +27,24 @@ const Cart: React.FC = () => {
             </div>
             <div className="cart-checkout">
                <div className="cart-checkout-container">
-                  <p className="sub-title">summary</p>
+                  <p className="title">summary</p>
                   <div className="cart-checkout-wrapper">
-                     <div>
-                        <p className="sub-title">subtotal</p>
-                        <p className="sub-title">tax</p>
-                        <p className="sub-title">total</p>
+                     <div className="checkout-left">
+                        <p className="text">subtotal</p>
+                        <p className="text">taxes</p>
                      </div>
-                     <div>
-                        <p className="sub-title">subtotal</p>
-                        <p className="sub-title">tax</p>
-                        <p className="sub-title">total</p>
+                     <div className="checkout-right">
+                        <p className="text">$1390</p>
+                        <p className="text">$20</p>
                      </div>
                   </div>
+                  <div className="checkout-bottom">
+                     <p className="text">total</p>
+                     <p className="text">$1270</p>
+                  </div>
+               </div>
+               <div className="checkout-btn-container">
+                  <a href="##">check out</a>
                </div>
             </div>
          </div>
