@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/rootReducer";
 import { AiFillDelete } from "react-icons/ai";
 import "./CartItem.scss";
-
-const CartItem: React.FC = () => {
-   const cartItems = useSelector((state: RootState) => state.cartReducer);
-
+interface cartInterface {
+   title: string;
+   details: string;
+   price: number;
+   images: string[];
+   qty: number;
+   inStock: number;
+}
+const CartItem: React.FC<cartInterface> = ({ title, details, images, qty }) => {
    const [state, setState] = useState(1);
    const handleChange = (event: React.ChangeEvent<{ value: any }>) => {
       setState(event.target.value);
    };
-
-   console.log(state);
 
    return (
       <div className="cart-item">

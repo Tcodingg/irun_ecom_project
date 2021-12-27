@@ -12,7 +12,7 @@ export enum actionTypes {
 export interface product {
    title: string;
    details: string;
-   price: Number;
+   price: number;
    description: string;
    images: string[];
    inStock: number;
@@ -57,7 +57,7 @@ type actionAddToCart = {
 export interface cartItems {
    title: string;
    details: string;
-   price: Number;
+   price: number;
    description: string;
    images: string[];
    inStock: number;

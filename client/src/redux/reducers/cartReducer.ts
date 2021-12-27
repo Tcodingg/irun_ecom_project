@@ -9,7 +9,7 @@ const initialState: cartInterface = {
 export const cartReducer = (
    state: cartInterface = initialState,
    action: Actions
-) => {
+): cartInterface => {
    switch (action.type) {
       case actionTypes.ADD_TO_CART:
          let inCart = state.cart.find((item) =>
@@ -35,7 +35,7 @@ export const cartReducer = (
             ...state,
             cart: state.cart.map((item) =>
                item._id === action.payload.id
-                  ? { ...item, qty: action.payload.id }
+                  ? { ...item, qty: action.payload.qty }
                   : item
             ),
          };
