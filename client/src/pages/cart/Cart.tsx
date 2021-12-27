@@ -21,15 +21,15 @@ const Cart: React.FC = () => {
       0
    );
    const taxes: number = subTotal * 0.13;
-   const total = subTotal + taxes;
+   const total: number = subTotal + taxes;
    useEffect(() => {
       setCheckout({
-         subTotal: Number(subTotal.toFixed(2)),
+         subTotal: subTotal,
          taxes: Number(taxes.toFixed(2)),
-         total: Number(total.toFixed(2)),
+         total: total,
       });
    }, [subTotal, taxes, total]);
-   console.log(checkout.subTotal);
+
    return (
       <section className="cart">
          <div className="bd-container cart-container">
@@ -60,12 +60,14 @@ const Cart: React.FC = () => {
                         <p className="text">{`$${checkout.subTotal.toFixed(
                            2
                         )}`}</p>
-                        <p className="text">{`$${checkout.taxes}`}</p>
+                        <p className="text">{`$${checkout.taxes.toFixed(
+                           2
+                        )}`}</p>
                      </div>
                   </div>
                   <div className="checkout-bottom">
                      <p className="text">total</p>
-                     <p className="text">{`$${checkout.total}`}</p>
+                     <p className="text">{`$${checkout.total.toFixed(2)}`}</p>
                   </div>
                </div>
                <div className="checkout-btn-container">

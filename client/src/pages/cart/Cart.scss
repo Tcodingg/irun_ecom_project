@@ -21,6 +21,9 @@
                text-transform: capitalize;
             }
             .cart-checkout-wrapper {
+               .checkout-right {
+                  text-align: right;
+               }
                display: flex;
                justify-content: space-between;
                .text {
