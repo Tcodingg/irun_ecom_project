@@ -24,42 +24,40 @@ const CartItem: React.FC<cartInterface> = ({
 
    return (
       <div className="cart-item">
-         <div className="cart-item-container">
+         <div className="cart-item-left">
+            <div className="image-container">
+               <img src={images[0]} alt="" />
+            </div>
             <div className="cart-item-info">
-               <div className="image-container">
-                  <img src={images[0]} alt="" />
+               <div>
+                  <h4 className="title">{title}</h4>
+                  <p className="text"> {details}</p>
                </div>
-               <div className="cart-item-left">
-                  <div>
-                     <h4 className="title">{title}</h4>
-                     <p className="text"> {details}</p>
-                  </div>
-                  <div>
-                     <label htmlFor="qty"> quantity</label>
-                     <select
-                        onChange={handleChange}
-                        value={state}
-                        name="qty"
-                        id=""
-                     >
-                        {Array.from(Array(inStock).keys()).map((x, i) => {
-                           return (
-                              <option key={i} value={x + 1}>
-                                 {x + 1}
-                              </option>
-                           );
-                        })}
-                     </select>
-                  </div>
+               <div>
+                  <label htmlFor="qty"> quantity</label>
+                  <select
+                     onChange={handleChange}
+                     value={state}
+                     name="qty"
+                     id=""
+                  >
+                     {Array.from(Array(inStock).keys()).map((x, i) => {
+                        return (
+                           <option key={i} value={x + 1}>
+                              {x + 1}
+                           </option>
+                        );
+                     })}
+                  </select>
                </div>
             </div>
-            <div className="cart-item-right">
-               <p>{`$${price}`}</p>
+         </div>
+         <div className="cart-item-right">
+            <p>{`$${price}`}</p>
 
-               <button className="delete-icon">
-                  <AiFillDelete />
-               </button>
-            </div>
+            <button className="delete-icon">
+               <AiFillDelete />
+            </button>
          </div>
       </div>
    );
