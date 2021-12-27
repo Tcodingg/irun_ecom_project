@@ -2,9 +2,11 @@ import CartItem from "../../components/cartItem/CartItem";
 
 const Cart: React.FC = () => {
    return (
-      <div>
-         <CartItem />
-      </div>
+      <section className="cart">
+         <div className="bd-container cart-container">
+            <CartItem />
+         </div>
+      </section>
    );
 };
 
