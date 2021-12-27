@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import Button from "../../components/button/Button";
 import CartItem from "../../components/cartItem/CartItem";
 import { RootState } from "../../redux/rootReducer";
 import "./Cart.scss";
@@ -21,6 +20,7 @@ const Cart: React.FC = () => {
                         images={item.images}
                         qty={item.qty}
                         inStock={item.inStock}
+                        _id={item._id}
                      />
                   );
                })}

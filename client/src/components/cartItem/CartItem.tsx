@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { removeFromCart } from "../../redux/actions/actionCart";
 import "./CartItem.scss";
 interface cartInterface {
    title: string;
@@ -8,6 +10,7 @@ interface cartInterface {
    images: string[];
    qty: number;
    inStock: number;
+   _id: string;
 }
 const CartItem: React.FC<cartInterface> = ({
    title,
@@ -16,8 +19,10 @@ const CartItem: React.FC<cartInterface> = ({
    qty,
    inStock,
    price,
+   _id,
 }) => {
    const [state, setState] = useState(1);
+   const dispatch = useDispatch();
    const handleChange = (event: React.ChangeEvent<{ value: any }>) => {
       setState(event.target.value);
    };
@@ -55,7 +60,10 @@ const CartItem: React.FC<cartInterface> = ({
          <div className="cart-item-right">
             <p>{`$${price}`}</p>
 
-            <button className="delete-icon">
+            <button
+               onClick={() => dispatch(removeFromCart(_id))}
+               className="delete-icon"
+            >
                <AiFillDelete />
             </button>
          </div>
