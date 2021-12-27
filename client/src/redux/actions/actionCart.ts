@@ -15,3 +15,14 @@ export const removeFromCart = (id: string) => async (dispatch: Dispatch) => {
       payload: id,
    });
 };
+
+export const adjustQtyCart =
+   (id: string, qty: number) => async (dispatch: Dispatch) => {
+      dispatch({
+         type: actionTypes.ADJUST_QTY_CART,
+         payload: {
+            id,
+            qty,
+         },
+      });
+   };

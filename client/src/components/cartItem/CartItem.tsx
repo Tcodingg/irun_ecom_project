@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "../../redux/actions/actionCart";
+import { adjustQtyCart, removeFromCart } from "../../redux/actions/actionCart";
 import "./CartItem.scss";
 interface cartInterface {
    title: string;
@@ -21,12 +21,16 @@ const CartItem: React.FC<cartInterface> = ({
    price,
    _id,
 }) => {
-   const [state, setState] = useState(1);
+   type qtyType = number;
+   const [quantity, setQuantity] = useState<qtyType>(qty);
    const dispatch = useDispatch();
    const handleChange = (event: React.ChangeEvent<{ value: any }>) => {
-      setState(event.target.value);
+      setQuantity(Number(event.target.value));
    };
 
+   useEffect(() => {
+      dispatch(adjustQtyCart(_id, quantity));
+   }, [quantity, dispatch]);
    return (
       <div className="cart-item">
          <div className="cart-item-left">
@@ -42,13 +46,13 @@ const CartItem: React.FC<cartInterface> = ({
                   <label htmlFor="qty"> quantity</label>
                   <select
                      onChange={handleChange}
-                     value={state}
+                     value={quantity}
                      name="qty"
                      id=""
                   >
-                     {Array.from(Array(inStock).keys()).map((x, i) => {
+                     {Array.from(Array(inStock).keys()).map((x: number, i) => {
                         return (
-                           <option key={i} value={x + 1}>
+                           <option key={i} value={Number(x + 1)}>
                               {x + 1}
                            </option>
                         );
