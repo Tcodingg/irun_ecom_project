@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Nav.scss";
 
 import { RiShoppingBagLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 const Nav: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +20,9 @@ const Nav: React.FC = () => {
                   <li>support</li>
                </div>
                <div className="cart-icon-wrapper">
-                  <RiShoppingBagLine />
+                  <Link to="/cart">
+                     <RiShoppingBagLine />
+                  </Link>
                </div>
                <div
                   onClick={() => setIsOpen((preVal) => !preVal)}
