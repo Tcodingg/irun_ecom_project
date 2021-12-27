@@ -9,7 +9,13 @@ interface cartInterface {
    qty: number;
    inStock: number;
 }
-const CartItem: React.FC<cartInterface> = ({ title, details, images, qty }) => {
+const CartItem: React.FC<cartInterface> = ({
+   title,
+   details,
+   images,
+   qty,
+   inStock,
+}) => {
    const [state, setState] = useState(1);
    const handleChange = (event: React.ChangeEvent<{ value: any }>) => {
       setState(event.target.value);
@@ -21,8 +27,8 @@ const CartItem: React.FC<cartInterface> = ({ title, details, images, qty }) => {
             <div className="cart-item-info">
                <img src="" alt="" />
                <div className="cart-item-left">
-                  <h4 className="title">Lorem, ipsum.</h4>
-                  <p className="text"> Lorem ipsum dolor sit.</p>
+                  <h4 className="title">{title}</h4>
+                  <p className="text"> {details}</p>
                   <label htmlFor="qty"> quantity</label>
                   <select
                      onChange={handleChange}
@@ -30,11 +36,13 @@ const CartItem: React.FC<cartInterface> = ({ title, details, images, qty }) => {
                      name="qty"
                      id=""
                   >
-                     <option value="1">1</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5</option>
-                     <option value="10">10</option>
+                     {Array.from(Array(inStock).keys()).map((x, i) => {
+                        return (
+                           <option key={i} value={x + 1}>
+                              {x + 1}
+                           </option>
+                        );
+                     })}
                   </select>
                </div>
             </div>
