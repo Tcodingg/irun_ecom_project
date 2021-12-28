@@ -42,7 +42,7 @@ const Home: React.FC = () => {
             </div>
          </div>
          <div className="bd-container trending">
-            <p className="text">trending</p>
+            <p className="title">trending</p>
             <div className="trending-container">
                <div className="trending-left-content">
                   <img src="/images/banner_2.jpg" alt="" />
