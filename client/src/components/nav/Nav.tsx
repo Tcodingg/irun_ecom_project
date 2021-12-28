@@ -16,7 +16,9 @@ const Nav: React.FC = () => {
             </div>
             <div className="nav-right-content">
                <div className={`menu ${isOpen ? "isOpen" : ""}`}>
-                  <li>shop</li>
+                  <li>
+                     <Link to="/shop">shop</Link>
+                  </li>
                   <li>support</li>
                </div>
                <div className="cart-icon-wrapper">

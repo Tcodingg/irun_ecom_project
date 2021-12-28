@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
-import { localStore } from "./redux/store";
+import { localStore, persisterStore } from "./redux/store";
 import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import Footer from "./components/footer/Footer";
 
 ReactDOM.render(
    <Provider store={localStore}>
-      <App key="1" /> , <Footer key="2" />
+      <PersistGate persistor={persisterStore}>
+         <App key="1" /> , <Footer key="2" />
+      </PersistGate>
    </Provider>,
    document.getElementById("root")
 );
