@@ -4,7 +4,6 @@ import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product from "./pages/product/Product";
 import Cart from "./pages/cart/Cart";
-import Footer from "./components/footer/Footer";
 import "./App.scss";
 import Shop from "./pages/shop/Shop";
 
@@ -19,7 +18,6 @@ function App() {
                <Route path="/cart" element={<Cart />} />
                <Route path="/shop" element={<Shop />} />
             </Routes>
-            {/* <Footer /> */}
          </div>
       </Router>
    );
