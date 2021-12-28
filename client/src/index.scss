@@ -8,6 +8,16 @@
 body {
    font-family: "Poppins", sans-serif;
 }
+#root {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+html,
+body {
+   height: 100%;
+}
+
 // ==== breaking points ==== //
 $mobile-breaking-point: 375px;
 $ipad-breaking-point: 800px;

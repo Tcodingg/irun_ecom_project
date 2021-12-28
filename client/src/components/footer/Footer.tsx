@@ -1,10 +1,7 @@
 import {
-   RiFacebookBoxFill,
    RiFacebookFill,
-   RiFacebookLine,
    RiInstagramLine,
    RiPinterestFill,
-   RiPinterestLine,
    RiTwitterLine,
 } from "react-icons/ri";
 import "./Footer.scss";

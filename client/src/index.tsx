@@ -4,10 +4,11 @@ import "./index.scss";
 import App from "./App";
 import { localStore } from "./redux/store";
 import { Provider } from "react-redux";
+import Footer from "./components/footer/Footer";
 
 ReactDOM.render(
    <Provider store={localStore}>
-      <App />
+      <App key="1" /> , <Footer key="2" />
    </Provider>,
    document.getElementById("root")
 );

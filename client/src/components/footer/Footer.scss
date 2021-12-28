@@ -1,4 +1,5 @@
 footer {
+   flex-shrink: 0;
    .footer-container {
       .footer-top {
          //  background-color: blue;
@@ -20,6 +21,9 @@ footer {
             font-size: 30px;
             font-weight: 600;
          }
+      }
+      .footer-bottom {
+         margin-bottom: 10px;
       }
    }
 }
