@@ -38,12 +38,13 @@ const Footer: React.FC = () => {
                </div>
                <div className="footer-icons">
                   <h4 className="title">connect with us</h4>
+                  <div>
+                     <RiFacebookFill />
 
-                  <RiFacebookFill />
-
-                  <RiInstagramLine />
-                  <RiTwitterLine />
-                  <RiPinterestFill />
+                     <RiInstagramLine />
+                     <RiTwitterLine />
+                     <RiPinterestFill />
+                  </div>
                </div>
             </div>
             <div className="footer-bottom">
