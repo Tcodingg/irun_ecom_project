@@ -33,11 +33,6 @@ const Product: React.FC = () => {
                   <p className="text">{product.details}</p>
                   <p className="text price">{`$${product.price}`}</p>
                   <div className="btn-qty-container">
-                     <select name="qty" id="">
-                        {Array.from(Array(product.inStock).keys()).map((x) => {
-                           return <option value={x + 1}>{x + 1}</option>;
-                        })}
-                     </select>
                      <button onClick={() => dispatch(addToCart(product))}>
                         add to cart
                      </button>
