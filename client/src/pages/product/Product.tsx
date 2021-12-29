@@ -38,11 +38,11 @@ const Product: React.FC = () => {
                   </div>
                   <div className="general-info">
                      <ProductDetails
-                        title="product details"
+                        title="details"
                         description={product.description}
                      />
                      <ProductDetails
-                        title="free delivery and return"
+                        title="delivery and return"
                         description={product.generalInfo}
                      />
                   </div>

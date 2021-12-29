@@ -10,11 +10,11 @@ const ProductDetails: React.FC<details> = ({ title, description }) => {
    const [isOpen, setIsOpen] = useState(false);
 
    return (
-      <div
-         onClick={() => setIsOpen((prevState) => !prevState)}
-         className="general-info-wrapper"
-      >
-         <div className="general-info-content">
+      <div className="general-info-wrapper">
+         <div
+            onClick={() => setIsOpen((prevState) => !prevState)}
+            className="general-info-content"
+         >
             <p className="sub-title">{title}</p>
             <button>{isOpen ? <BiMinus /> : <BiPlus />} </button>
          </div>
