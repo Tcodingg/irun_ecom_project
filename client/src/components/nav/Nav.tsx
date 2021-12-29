@@ -8,9 +8,10 @@ import { Link } from "react-router-dom";
 import { RootState } from "../../redux/rootReducer";
 const Nav: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
-   const inCart = useSelector(
-      (state: RootState) => state.cartReducer.cart.length
-   );
+
+   const cart = useSelector((state: RootState) => state.cartReducer.cart);
+   let totalItems = 0;
+   cart.forEach(({ qty }) => (totalItems += qty));
 
    return (
       <nav>
@@ -36,7 +37,7 @@ const Nav: React.FC = () => {
                   </li>
                </div>
                <Link to="/cart" className="cart-icon-wrapper">
-                  <p className="inCart">{inCart}</p>
+                  <p className="inCart">{totalItems}</p>
                   <div className="cart-icon">
                      <RiShoppingBagLine />
                   </div>
