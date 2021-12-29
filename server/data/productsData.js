@@ -40,10 +40,10 @@ const products = [
       description:
          "The Nike Zoom Mamba 3 Unisex Distance Spike is designed for the steeplechase with a single-layer, open-mesh upper and perforated sockliner to help let moisture out on the fly. Their six-pin spike configuration provides a close-to-the-ground feel and incredible traction.",
       images: [
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/iowamrpb5x4vgi4optpn/zoom-mamba-3-distance-spike-XPTbxzmO.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/omtvlntl5rzqqqnarf7q/zoom-mamba-3-distance-spike-XPTbxzmO.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/znal7qdgcqkgvarq0iww/zoom-mamba-3-distance-spike-XPTbxzmO.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/od7ciuwdanhvr1li55hh/zoom-mamba-3-distance-spike-XPTbxzmO.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/49b34304-c6f7-4373-b35a-cd3ddcb25586/air-zoom-pegasus-38-airnathan-bell-road-running-shoes-qx7tFM.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5e462e27-13f5-4044-a044-4bb5ca2c2304/air-zoom-pegasus-38-airnathan-bell-road-running-shoes-qx7tFM.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8c3f81c1-81bf-49d1-8db3-3b9098cf6607/air-zoom-pegasus-38-airnathan-bell-road-running-shoes-qx7tFM.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6ccb3012-1b31-4fe1-ad7c-3833bd2efcb2/air-zoom-pegasus-38-airnathan-bell-road-running-shoes-qx7tFM.png",
       ],
       inStock: 10,
       generalInfo:
@@ -87,16 +87,16 @@ const products = [
       gender: "female",
    },
    {
-      title: "Nike Air Zoom Pegasus 38 By You",
-      details: "Women's Road Running Shoes",
+      title: "Nike Zoom Rival M 9",
+      details: "Athletics Multi-Event Spikes",
       price: 180,
       description:
          "Your workhorse with wings returns. The Nike Air Zoom Pegasus 38 By You continues to put a spring in your step, using the same foam as its predecessor. Mesh in the upper combines together the comfort and durability you want with an optional FlyEase entry system that gets you in and out quickly and easily.",
       images: [
-         "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/41dbf0fb-5080-4da7-ac0a-dbeed81e1af2/custom-nike-air-zoom-pegasus-38-by-you.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6f9bf68f-f4c8-4ae5-9ee5-9ac3cd243795/custom-nike-air-zoom-pegasus-38-by-you.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2d8244d7-bddf-43e3-afea-28ccbb0b78e1/custom-nike-air-zoom-pegasus-38-by-you.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7956cc54-0639-4faa-81c4-ed764fd3e2a1/custom-nike-air-zoom-pegasus-38-by-you.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/407ea7aa-7883-414a-ac15-b5907c809752/zoom-rival-m-9-athletics-multi-event-spikes-21b6cJ.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2825e1f4-5561-4bb5-8fda-6b4ab4c29449/zoom-rival-m-9-athletics-multi-event-spikes-21b6cJ.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/839ea3ed-ae5b-438b-b272-ae121500ba14/zoom-rival-m-9-athletics-multi-event-spikes-21b6cJ.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/690359c8-cc52-4692-8bd7-49e71f6a08de/zoom-rival-m-9-athletics-multi-event-spikes-21b6cJ.png",
       ],
       inStock: 6,
       generalInfo:
@@ -104,16 +104,16 @@ const products = [
       gender: "female",
    },
    {
-      title: "Nike Internationalist By You",
-      details: "Custom Women's Shoe",
+      title: "Nike Air Zoom Pegasus 38",
+      details: "Women's Road Running Shoes",
       price: 145,
       description:
          "The Nike Internationalist Low By You celebrates a 1980s icon originally designed for serious runners who knew no bounds. Now fashioned for streetwear, this Internationalist lets you choose the materials from a selection of low-key earth tones. Top it off with throwback Nike branding or personal details so you can stand out in your neighbourhood or all over the world.",
       images: [
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/733b1064-c13d-4b60-b5b0-8bae4b565bcd/custom-nike-internationalist-low-by-you.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6ec42f99-faeb-42dc-87a2-f40b361ce518/custom-nike-internationalist-low-by-you.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/2f0b8503-c6f2-49e9-84f6-fd441aa80a59/custom-nike-internationalist-low-by-you.png",
-         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8ac969e2-c483-4fd8-a651-bc1a325d3e18/custom-nike-internationalist-low-by-you.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8d927006-7400-44f9-ace1-c02e9b88f72d/air-zoom-pegasus-38-road-running-shoes-RK335N.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/cd3e58fa-86c3-422d-ac93-8df860ebc700/air-zoom-pegasus-38-road-running-shoes-RK335N.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/82edd8f9-a0ab-44ca-8402-5f95269e3f05/air-zoom-pegasus-38-road-running-shoes-RK335N.png",
+         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d26e88d6-bb8d-4196-91e7-e4f77d7a91ee/air-zoom-pegasus-38-road-running-shoes-RK335N.png",
       ],
       inStock: 8,
       generalInfo:
