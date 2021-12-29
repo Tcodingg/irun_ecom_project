@@ -81,9 +81,11 @@
          .trending-left-content,
          .trending-right-content {
             position: relative;
-            width: 100%;
+
+            flex: 1;
             img {
                width: 100%;
+               height: 100%;
             }
             .trending-content {
                width: fit-content;

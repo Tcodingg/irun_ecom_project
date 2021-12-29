@@ -51,13 +51,11 @@ const Home: React.FC = () => {
                      <Button text="shop now" txtColor="black" />
                   </div>
                </div>
-               <div className="trending-left-content">
-                  <div className="trending-right-content">
-                     <img src="/images/banner_3.jpg" alt="" />
-                     <div className="trending-content">
-                        <p className="text">outdoor running shoes</p>
-                        <Button text="shop now" txtColor="black" />
-                     </div>
+               <div className="trending-right-content">
+                  <img src="/images/banner_3.jpg" alt="" />
+                  <div className="trending-content">
+                     <p className="text">outdoor running shoes</p>
+                     <Button text="shop now" txtColor="black" />
                   </div>
                </div>
             </div>

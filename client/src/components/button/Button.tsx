@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Button.scss";
 
@@ -10,9 +11,9 @@ interface btnTypes {
 }
 const Button: React.FC<btnTypes> = ({ text, url, txtColor }) => {
    return (
-      <a
+      <Link
+         to="/shop"
          className="reusable-btn"
-         href={url}
          style={{
             color: `${txtColor}`,
             cursor: "pointer",
@@ -20,7 +21,7 @@ const Button: React.FC<btnTypes> = ({ text, url, txtColor }) => {
          }}
       >
          {text}
-      </a>
+      </Link>
    );
 };
 
