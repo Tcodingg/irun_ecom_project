@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+
 import "./Nav.scss";
 
 import { RiShoppingBagLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { RootState } from "../../redux/rootReducer";
 const Nav: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
+   const inCart = useSelector(
+      (state: RootState) => state.cartReducer.cart.length
+   );
 
    return (
       <nav>
@@ -29,11 +35,12 @@ const Nav: React.FC = () => {
                      <Link to="#">support</Link>
                   </li>
                </div>
-               <div className="cart-icon-wrapper">
-                  <Link to="/cart">
+               <Link to="/cart" className="cart-icon-wrapper">
+                  <p className="inCart">{inCart}</p>
+                  <div className="cart-icon">
                      <RiShoppingBagLine />
-                  </Link>
-               </div>
+                  </div>
+               </Link>
                <div
                   onClick={() => setIsOpen((preVal) => !preVal)}
                   className="burger-icon-container"

@@ -37,6 +37,7 @@ const Cart: React.FC = () => {
                {cart.map((item) => {
                   return (
                      <CartItem
+                        key={item._id}
                         title={item.title}
                         details={item.details}
                         price={item.price}

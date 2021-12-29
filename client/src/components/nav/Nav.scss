@@ -22,10 +22,25 @@ nav {
          font-size: index.$text-font-size;
          .cart-icon-wrapper {
             font-size: 24px;
-            a {
+            position: relative;
+            .cart-icon {
                text-transform: none;
                color: index.$primary-color;
                display: flex;
+            }
+            .inCart {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 10px;
+               position: absolute;
+               color: white;
+               background-color: black;
+               height: 13px;
+               width: 13px;
+               bottom: -2px;
+               right: 0;
+               border-radius: 50%;
             }
          }
          .menu {
