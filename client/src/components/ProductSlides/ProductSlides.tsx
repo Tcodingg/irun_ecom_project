@@ -25,9 +25,9 @@ const ProductSlides: React.FC<imagesInterface> = ({ images }) => {
             thumbs={{ swiper: thumbsSwiper }}
             className="mySwiper2"
          >
-            {images.map((i) => {
+            {images.map((i, index) => {
                return (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                      <img src={i} alt="" />
                   </SwiperSlide>
                );
@@ -41,9 +41,9 @@ const ProductSlides: React.FC<imagesInterface> = ({ images }) => {
             watchSlidesProgress={true}
             className="mySwiper"
          >
-            {images.map((i) => {
+            {images.map((i, index) => {
                return (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                      <img src={i} alt="" />
                   </SwiperSlide>
                );

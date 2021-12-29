@@ -16,7 +16,6 @@ const Product: React.FC = () => {
    const product = useSelector(
       (state: RootState) => state.productReducer.product
    );
-   console.log(product);
    useEffect(() => {
       dispatch(getProduct(id));
    }, [id, dispatch]);

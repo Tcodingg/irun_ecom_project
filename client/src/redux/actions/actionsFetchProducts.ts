@@ -15,8 +15,6 @@ export const getAllProducts = () => async (dispatch: Dispatch<Actions>) => {
          type: actionTypes.GET_ALL_PRODUCTS_SUCCUSS,
          payload: data,
       });
-
-      console.log(data);
    } catch (error: any) {
       dispatch({
          type: actionTypes.GET_ALL_PRODUCTS_FAIL,
