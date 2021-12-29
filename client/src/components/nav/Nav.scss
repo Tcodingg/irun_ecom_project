@@ -30,25 +30,38 @@ nav {
          }
          .menu {
             display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 3.5rem;
-            right: index.$mg-2;
-            max-height: 50px;
             overflow: hidden;
             background-color: white;
-
+            z-index: 1000;
+            gap: index.$mg-2;
+            height: 100%;
             li {
                list-style: none;
+               position: relative;
                a {
                   text-decoration: none;
                   color: black;
                   text-transform: capitalize;
-
                   font-size: 15px;
                   text-transform: uppercase;
-                  letter-spacing: 3px;
+                  letter-spacing: 1.5px;
                   font-weight: 500;
+                  &:after {
+                     background: none repeat scroll 0 0 transparent;
+                     bottom: 0;
+                     content: "";
+                     display: block;
+                     height: 2px;
+                     left: 50%;
+                     position: absolute;
+                     background: #000;
+                     transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                     width: 0;
+                  }
+                  &:hover:after {
+                     width: 100%;
+                     left: 0;
+                  }
                }
             }
          }
@@ -67,9 +80,19 @@ nav {
       .nav-container {
          .nav-right-content {
             .menu {
-               max-height: 0px;
+               position: absolute;
+               max-height: 0;
+               width: 100%;
+               top: 3.5rem;
+               left: 0;
+               transition: all 0.35s ease-in-out;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               z-index: 1000;
+
                &.isOpen {
-                  max-height: 200px;
+                  max-height: 100vh;
                }
             }
             .burger-icon-container {
@@ -96,6 +119,7 @@ nav {
                      height: 1.5px;
                      background-color: black;
                      transform: translateY(3px);
+                     transition: all 0.3s ease-out;
                   }
                   &:after {
                      content: "";
@@ -104,25 +128,9 @@ nav {
                      height: 1.5px;
                      background-color: black;
                      transform: translateY(-3px);
+                     transition: all 0.3s ease-out;
                   }
                }
-            }
-         }
-      }
-   }
-}
-
-@media only screen and (min-width: 701px) {
-   nav {
-      .nav-container {
-         .nav-right-content {
-            .menu {
-               position: relative;
-               top: 0;
-               max-height: 100%;
-               flex-direction: row;
-               right: 0;
-               gap: index.$mg-1;
             }
          }
       }

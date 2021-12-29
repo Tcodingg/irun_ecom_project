@@ -16,12 +16,17 @@ const Nav: React.FC = () => {
             </div>
             <div className="nav-right-content">
                <div className={`menu ${isOpen ? "isOpen" : ""}`}>
-                  {" "}
-                  <li>
+                  <li onClick={() => setIsOpen(false)}>
                      <Link to="/">home</Link>
                   </li>
-                  <li>
+                  <li onClick={() => setIsOpen(false)}>
                      <Link to="/shop">shop</Link>
+                  </li>
+                  <li onClick={() => setIsOpen(false)}>
+                     <Link to="#">About</Link>
+                  </li>
+                  <li onClick={() => setIsOpen(false)}>
+                     <Link to="#">support</Link>
                   </li>
                </div>
                <div className="cart-icon-wrapper">
