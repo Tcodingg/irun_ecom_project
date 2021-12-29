@@ -25,7 +25,7 @@
          margin: 0;
          border: 2px solid transparent;
          width: 100%;
-         opacity: 0.6;
+         opacity: 0.5;
          img {
             display: block;
             width: 100%;
@@ -43,7 +43,6 @@
          }
       }
       .swiper-slide.swiper-slide-thumb-active {
-         border: 2px solid rgba(0, 0, 0, 0.384);
          opacity: 1;
       }
    }
