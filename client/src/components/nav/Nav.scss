@@ -22,6 +22,11 @@ nav {
          font-size: index.$text-font-size;
          .cart-icon-wrapper {
             font-size: 24px;
+            a {
+               text-transform: none;
+               color: index.$primary-color;
+               display: flex;
+            }
          }
          .menu {
             display: flex;
@@ -31,9 +36,20 @@ nav {
             right: index.$mg-2;
             max-height: 50px;
             overflow: hidden;
+            background-color: white;
 
             li {
                list-style: none;
+               a {
+                  text-decoration: none;
+                  color: black;
+                  text-transform: capitalize;
+
+                  font-size: 15px;
+                  text-transform: uppercase;
+                  letter-spacing: 3px;
+                  font-weight: 500;
+               }
             }
          }
          .burger-icon-container {

@@ -12,10 +12,14 @@ body {
    display: flex;
    flex-direction: column;
    height: 100%;
+   // scrollbar-gutter: stable;
+   // overflow-y: overlay;
 }
 html,
 body {
    height: 100%;
+   scrollbar-gutter: stable both-edges;
+   scrollbar-width: none;
 }
 
 // ==== breaking points ==== //

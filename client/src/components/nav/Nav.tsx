@@ -10,16 +10,19 @@ const Nav: React.FC = () => {
       <nav>
          <div className="bd-container nav-container">
             <div className="nav-left-content">
-               <a className="title" href="##">
+               <Link className="title" to="/">
                   iRun<span>.</span>
-               </a>
+               </Link>
             </div>
             <div className="nav-right-content">
                <div className={`menu ${isOpen ? "isOpen" : ""}`}>
+                  {" "}
+                  <li>
+                     <Link to="/">home</Link>
+                  </li>
                   <li>
                      <Link to="/shop">shop</Link>
                   </li>
-                  <li>support</li>
                </div>
                <div className="cart-icon-wrapper">
                   <Link to="/cart">
