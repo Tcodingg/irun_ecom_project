@@ -6,7 +6,10 @@
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "server": "nodemon server.js",
-      "data:import": "node seederScript.js"
+      "data:import": "node seederScript.js",
+      "build": "cd client && npm run build",
+      "heroku-postbuild": "npm run install-client && npm run build",
+      "start": "node server.js"
    },
    "keywords": [],
    "author": "",

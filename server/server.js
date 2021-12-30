@@ -14,4 +14,7 @@ connectDB();
 
 app.use("/api/products", productsRoute);
 
+if (process.env.NODE_ENV === "production") {
+   app.use(express.static("client/build"));
+}
 app.listen(PORT, () => console.log("server is connected"));
