@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getAllProducts } from "../../redux/actions/actionsFetchProducts";
 
-import Button from "../../components/button/Button";
+import Button from "../../components/button/roundButtons/Button";
 import "./Home.scss";
 
 import Products from "../../components/products/Products";
