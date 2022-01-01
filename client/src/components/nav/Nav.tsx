@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { VscAccount } from "react-icons/vsc";
 
 import "./Nav.scss";
 
@@ -8,6 +9,7 @@ import { Link } from "react-router-dom";
 import { RootState } from "../../redux/rootReducer";
 const Nav: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
+   const [isAuth, setIsAuth] = useState(true);
 
    const cart = useSelector((state: RootState) => state.cartReducer.cart);
    let totalItems = 0;
