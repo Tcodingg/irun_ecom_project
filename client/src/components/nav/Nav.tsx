@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { VscAccount } from "react-icons/vsc";
+import { AiOutlineLogout } from "react-icons/ai";
 
 import "./Nav.scss";
 
@@ -35,7 +36,24 @@ const Nav: React.FC = () => {
                      <Link to="#">About</Link>
                   </li>
                   <li onClick={() => setIsOpen(false)}>
-                     <Link to="#">support</Link>
+                     <Link to="#">Support</Link>
+                  </li>
+                  <li onClick={() => setIsOpen(false)}>
+                     {isAuth ? (
+                        <Link
+                           onClick={() => console.log("logged out")}
+                           className="account-container"
+                           to="/"
+                        >
+                           <AiOutlineLogout />
+                           <p style={{ fontSize: "13px" }}>logout</p>
+                        </Link>
+                     ) : (
+                        <Link className="account-container" to="/login">
+                           <VscAccount />
+                           <p style={{ fontSize: "13px" }}>account</p>
+                        </Link>
+                     )}
                   </li>
                </div>
                <Link to="/cart" className="cart-icon-wrapper">
