@@ -7,6 +7,7 @@ import Cart from "./pages/cart/Cart";
 import "./App.scss";
 import Shop from "./pages/shop/Shop";
 import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
 
 function App() {
    return (
@@ -19,6 +20,7 @@ function App() {
                <Route path="/cart" element={<Cart />} />
                <Route path="/shop" element={<Shop />} />
                <Route path="/login" element={<Login />} />
+               <Route path="/register" element={<Register />} />
             </Routes>
          </div>
       </Router>

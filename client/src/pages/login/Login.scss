@@ -2,7 +2,6 @@
 $max-width: 445px;
 .login {
    .login-container {
-      //   border: 1px solid black;
       flex-direction: column;
 
       .block-customer-login {
@@ -13,7 +12,6 @@ $max-width: 445px;
          border-bottom: 1px solid rgba(207, 207, 207, 0.651);
          padding-bottom: index.$mg-4;
          .login-heading {
-            // text-align: center;
             .title {
                text-transform: capitalize;
             }
