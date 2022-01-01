@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { RootState } from "../../redux/rootReducer";
 const Nav: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
-   const [isAuth, setIsAuth] = useState(true);
+   const [isAuth, setIsAuth] = useState(false);
 
    const cart = useSelector((state: RootState) => state.cartReducer.cart);
    let totalItems = 0;
@@ -58,7 +58,7 @@ const Nav: React.FC = () => {
                </div>
                <Link to="/cart" className="cart-icon-wrapper">
                   <p className="inCart">{totalItems}</p>
-                  <div className="cart-icon">
+                  <div className="cart-icon" onClick={() => setIsOpen(false)}>
                      <RiShoppingBagLine />
                   </div>
                </Link>
