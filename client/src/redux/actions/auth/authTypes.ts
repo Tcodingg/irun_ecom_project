@@ -21,7 +21,7 @@ type actionLoginSuccess = {
    payload: userData;
 };
 type actionRegisterSuccess = {
-   type: actionTypes.LOGIN_SUCCESS;
+   type: actionTypes.REGISTER_SUCCESS;
    payload: userData;
 };
 
@@ -31,12 +31,12 @@ type actionLoginFail = {
 };
 
 type actionRegisterFail = {
-   type: actionTypes.LOGIN_FAIL;
+   type: actionTypes.REGISTER_FAIL;
    payload: any;
 };
 
 type actionAuthFail = {
-   type: actionTypes.LOGIN_FAIL;
+   type: actionTypes.AUTH_FAIL;
    payload: any;
 };
 

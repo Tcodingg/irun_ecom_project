@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Button from "../../components/button/squareButtons/Button";
 import "./Login.scss";
+
+export type loginTypes = {
+   email: string;
+   password: string;
+};
 const Login: React.FC = () => {
-   type inputTypes = {
-      email: string;
-      password: string;
-   };
-   const [input, setInput] = useState<inputTypes>({
+   const [input, setInput] = useState<loginTypes>({
       email: "",
       password: "",
    });
