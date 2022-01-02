@@ -30,6 +30,7 @@ export const authReducer = (
             loading: true,
          };
       case actionTypes.LOGIN_SUCCESS:
+      case actionTypes.REGISTER_SUCCESS:
          return {
             ...state,
             loading: false,
@@ -37,6 +38,8 @@ export const authReducer = (
             err: null,
          };
       case actionTypes.LOGIN_FAIL:
+      case actionTypes.REGISTER_FAIL:
+      case actionTypes.AUTH_FAIL:
          return {
             ...state,
             loading: false,
