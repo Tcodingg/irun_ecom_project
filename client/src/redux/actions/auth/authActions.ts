@@ -21,7 +21,6 @@ export const login = (input: any) => async (dispatch: Dispatch<Actions>) => {
 };
 
 // register
-
 export const register = (input: any) => async (dispatch: Dispatch) => {
    try {
       const { data } = await axios.get(`${url}/api/register`, input);
