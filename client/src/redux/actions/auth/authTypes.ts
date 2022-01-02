@@ -15,3 +15,34 @@ export type userData = {
       id: string;
    };
 };
+
+type actionLoginSuccess = {
+   type: actionTypes.LOGIN_SUCCESS;
+   payload: userData;
+};
+type actionRegisterSuccess = {
+   type: actionTypes.LOGIN_SUCCESS;
+   payload: userData;
+};
+
+type actionLoginFail = {
+   type: actionTypes.LOGIN_FAIL;
+   payload: any;
+};
+
+type actionRegisterFail = {
+   type: actionTypes.LOGIN_FAIL;
+   payload: any;
+};
+
+type actionAuthFail = {
+   type: actionTypes.LOGIN_FAIL;
+   payload: any;
+};
+
+export type Actions =
+   | actionLoginSuccess
+   | actionLoginFail
+   | actionRegisterSuccess
+   | actionRegisterFail
+   | actionAuthFail;
