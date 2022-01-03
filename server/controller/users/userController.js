@@ -93,4 +93,29 @@ const register = async (req, res) => {
    }
 };
 
-module.exports = { login, register };
+// refresh token
+const refreshToken = async (req, res) => {
+   const refToken = req.body.refreshToken;
+
+   if (!refToken)
+      return res
+         .status(401)
+         .json({ message: "no refresh token. please login again" });
+
+   try {
+      // console.log(refToken);
+      const decoded = jwt.verify(refToken, process.env.REFRESH_TOKEN);
+      req.user = decoded;
+      const id = req.user._id;
+      const accessToken = jwt.sign({ _id: id }, process.env.ACCESS_TOKEN, {
+         expiresIn: 30,
+      });
+      await res.json({
+         accessToken: accessToken,
+      });
+   } catch (error) {
+      res.status(400).json({ message: "token can not be verified" });
+   }
+};
+
+module.exports = { login, register, refreshToken };
