@@ -2,6 +2,7 @@ import { actionTypes, userData, Actions } from "./authTypes";
 interface authInterface {
    loading: boolean;
    user: userData;
+   isLoggedIn: boolean;
    err: any;
 }
 const initialState: authInterface = {
@@ -15,6 +16,7 @@ const initialState: authInterface = {
          id: "",
       },
    },
+   isLoggedIn: false,
 
    err: null,
 };
@@ -43,6 +45,7 @@ export const authReducer = (
                   id: action.payload.user.id,
                },
             },
+            isLoggedIn: true,
             err: null,
          };
       case actionTypes.LOGIN_FAIL:
@@ -60,6 +63,7 @@ export const authReducer = (
                   id: "",
                },
             },
+            isLoggedIn: false,
             err: action.payload,
          };
 
@@ -76,6 +80,7 @@ export const authReducer = (
                   id: "",
                },
             },
+            isLoggedIn: false,
             err: null,
          };
       default:
