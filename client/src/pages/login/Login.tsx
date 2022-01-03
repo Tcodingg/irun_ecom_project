@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/squareButtons/Button";
+import { login } from "../../redux/actions/auth/authActions";
 import "./Login.scss";
 
 export type loginTypes = {
@@ -13,6 +15,7 @@ const Login: React.FC = () => {
       password: "",
    });
    const nav = useNavigate();
+   const dispatch = useDispatch();
 
    //handle input onChange
    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +25,7 @@ const Login: React.FC = () => {
 
    // handle login
    const handleLogin = () => {
-      console.log(input);
+      dispatch(login(input));
    };
 
    return (
