@@ -37,3 +37,10 @@ export const register = (input: any) => async (dispatch: Dispatch) => {
       });
    }
 };
+
+// logout
+export const logout = () => (dispatch: Dispatch) => {
+   dispatch({
+      type: actionTypes.LOGOUT,
+   });
+};
