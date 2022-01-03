@@ -2,7 +2,7 @@ import { actionTypes, userData, Actions } from "./authTypes";
 interface authInterface {
    loading: boolean;
    user: userData;
-   err: null;
+   err: any;
 }
 const initialState: authInterface = {
    loading: false,
@@ -34,7 +34,15 @@ export const authReducer = (
          return {
             ...state,
             loading: false,
-            user: action.payload,
+            user: {
+               accessToken: action.payload.accessToken,
+               refreshToken: action.payload.refreshToken,
+               user: {
+                  name: action.payload.user.name,
+                  email: action.payload.user.email,
+                  id: action.payload.user.id,
+               },
+            },
             err: null,
          };
       case actionTypes.LOGIN_FAIL:
@@ -43,7 +51,32 @@ export const authReducer = (
          return {
             ...state,
             loading: false,
-            user: action.payload,
+            user: {
+               accessToken: "",
+               refreshToken: "",
+               user: {
+                  name: "",
+                  email: "",
+                  id: "",
+               },
+            },
+            err: action.payload,
+         };
+
+      case actionTypes.LOGOUT:
+         return {
+            ...state,
+            loading: false,
+            user: {
+               accessToken: "",
+               refreshToken: "",
+               user: {
+                  name: "",
+                  email: "",
+                  id: "",
+               },
+            },
+            err: null,
          };
       default:
          return state;

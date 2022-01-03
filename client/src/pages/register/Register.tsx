@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import Button from "../../components/button/squareButtons/Button";
+import { register } from "../../redux/actions/auth/authActions";
 import "./Register.scss";
 const Register: React.FC = () => {
+   const dispatch = useDispatch();
    const [input, setInput] = useState({
       name: "",
       email: "",
@@ -19,7 +22,7 @@ const Register: React.FC = () => {
 
    // handle register
    const handleRegister = () => {
-      console.log(input);
+      //dispatch(register(input));
    };
    return (
       <section className="register">

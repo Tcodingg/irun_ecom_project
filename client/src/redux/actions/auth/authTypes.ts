@@ -5,6 +5,7 @@ export enum actionTypes {
    REGISTER_FAIL = "REGISTER_FAIL",
    AUTH_FAIL = "AUTH_FAIL",
    USER_LOADING = "USER_LOADING",
+   LOGOUT = "LOGOUT",
 }
 
 export type userData = {
@@ -44,10 +45,16 @@ type actionAuthFail = {
    payload: any;
 };
 
+type actionLogout = {
+   type: actionTypes.LOGOUT;
+   payload: userData;
+};
+
 export type Actions =
    | actionLoginSuccess
    | actionLoginFail
    | actionRegisterSuccess
    | actionRegisterFail
    | actionAuthFail
-   | actionUserLoading;
+   | actionUserLoading
+   | actionLogout;
