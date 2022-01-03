@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/squareButtons/Button";
 import "./Login.scss";
 
@@ -11,6 +12,7 @@ const Login: React.FC = () => {
       email: "",
       password: "",
    });
+   const nav = useNavigate();
 
    //handle input onChange
    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,10 +24,7 @@ const Login: React.FC = () => {
    const handleLogin = () => {
       console.log(input);
    };
-   // handle register
-   const handleRegister = () => {
-      console.log("handle register");
-   };
+
    return (
       <section className="login">
          <div className="bd-container section login-container flex">
@@ -58,7 +57,10 @@ const Login: React.FC = () => {
                   Creating an account has many benefits: checkout faster, keep
                   more than one address, track orders and more.
                </p>
-               <Button handleClick={handleRegister} text="Create an account" />
+               <Button
+                  handleClick={() => nav("/register")}
+                  text="Create an account"
+               />
             </div>
          </div>
       </section>
