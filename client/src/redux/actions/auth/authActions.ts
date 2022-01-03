@@ -7,7 +7,7 @@ const url = process.env.REACT_APP_SERVER_URL;
 // login
 export const login = (input: any) => async (dispatch: Dispatch<Actions>) => {
    try {
-      const { data } = await axios.get(`${url}/auth/login`, input);
+      const { data } = await axios.get(`${url}/api/auth/login`, input);
       dispatch({
          type: actionTypes.LOGIN_SUCCESS,
          payload: data,
