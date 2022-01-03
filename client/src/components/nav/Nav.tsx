@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { VscAccount } from "react-icons/vsc";
 import { AiOutlineLogout } from "react-icons/ai";
 
@@ -10,9 +10,10 @@ import { Link } from "react-router-dom";
 import { RootState } from "../../redux/rootReducer";
 const Nav: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
-   const [isAuth, setIsAuth] = useState(false);
-
-   const cart = useSelector((state: RootState) => state.cartReducer.cart);
+   const {
+      authReducer: { isLoggedIn },
+      cartReducer: { cart },
+   } = useSelector((state: RootState) => state);
    let totalItems = 0;
    cart.forEach(({ qty }) => (totalItems += qty));
 
@@ -39,7 +40,7 @@ const Nav: React.FC = () => {
                      <Link to="#">Support</Link>
                   </li>
                   <li onClick={() => setIsOpen(false)}>
-                     {isAuth ? (
+                     {isLoggedIn ? (
                         <Link
                            onClick={() => console.log("logged out")}
                            className="account-container"
