@@ -22,7 +22,7 @@ const Register: React.FC = () => {
 
    // handle register
    const handleRegister = () => {
-      //dispatch(register(input));
+      dispatch(register(input));
    };
    return (
       <section className="register">

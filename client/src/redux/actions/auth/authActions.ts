@@ -23,12 +23,11 @@ export const login = (input: any) => async (dispatch: Dispatch<Actions>) => {
 // register
 export const register = (input: any) => async (dispatch: Dispatch) => {
    try {
-      const { data } = await axios.get(`${url}/api/register`, input);
+      const { data } = await axios.post(`${url}/api/auth/register`, input);
       dispatch({
          type: actionTypes.REGISTER_SUCCESS,
          payload: data,
       });
-      console.log(data);
    } catch (error) {
       dispatch({
          type: actionTypes.REGISTER_FAIL,

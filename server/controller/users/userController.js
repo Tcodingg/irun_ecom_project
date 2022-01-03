@@ -4,9 +4,7 @@ const User = require("../../models/userModule");
 
 // login user
 const login = async (req, res) => {
-   const {
-      input: { email, password },
-   } = req.body;
+   const { email, password } = req.body;
 
    try {
       // check if  the user exists
@@ -47,4 +45,52 @@ const login = async (req, res) => {
    }
 };
 
-module.exports = { login };
+// register user
+const register = async (req, res) => {
+   const { name, email, password } = req.body;
+
+   try {
+      // check if the users user
+      const exists = await User.findOne({ email: email });
+
+      if (exists) return res.status(400).json("Email is already registered");
+
+      // if the users doesnt exist
+      const newUser = new User({ name, email, password });
+      bcrypt.genSalt(10, (err, salt) => {
+         bcrypt.hash(newUser.password, salt, async (err, hash) => {
+            if (err) throw err;
+            newUser.password = hash;
+
+            const user = await newUser.save();
+
+            const accessToken = jwt.sign(
+               { _id: user._id },
+               process.env.ACCESS_TOKEN,
+               { expiresIn: 10 }
+            );
+            if (!accessToken) return res.json("no access token");
+
+            const refreshToken = jwt.sign(
+               { _id: user._id },
+               process.env.REFRESH_TOKEN,
+               { expiresIn: 30 }
+            );
+            if (!refreshToken) return res.json("no access token");
+            res.json({
+               accessToken,
+               refreshToken,
+               user: {
+                  id: user.id,
+                  name: user.name,
+                  email: user.email,
+               },
+            });
+         });
+      });
+   } catch (error) {
+      console.log(error);
+   }
+};
+
+module.exports = { login, register };
