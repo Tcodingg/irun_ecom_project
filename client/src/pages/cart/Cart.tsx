@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import CartItem from "../../components/cartItem/CartItem";
 import { RootState } from "../../redux/rootReducer";
 import "./Cart.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../../components/button/squareButtons/Button";
 
 interface checkoutInterface {
    subTotal: number;
@@ -16,6 +17,7 @@ const Cart: React.FC = () => {
       taxes: 0,
       total: 0,
    });
+   const nav = useNavigate();
    const cart = useSelector((state: RootState) => state.cartReducer.cart);
    const subTotal: number = cart.reduce(
       (amount, item) => item.price * item.qty + amount,
@@ -73,7 +75,10 @@ const Cart: React.FC = () => {
                   </div>
                </div>
                <div className="checkout-btn-container">
-                  <Link to="/checkout">check out</Link>
+                  <Button
+                     text="Check Out"
+                     handleClick={() => nav("/checkout")}
+                  />
                </div>
             </div>
          </div>
