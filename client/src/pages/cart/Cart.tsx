@@ -35,7 +35,7 @@ const Cart: React.FC = () => {
 
    return (
       <section className="cart">
-         <div className="bd-container cart-container">
+         <div className="bd-container cart-container section">
             <div className="cart-items">
                {cart.map((item) => {
                   return (
