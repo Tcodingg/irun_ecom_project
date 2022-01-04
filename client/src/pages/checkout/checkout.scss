@@ -1,0 +1,70 @@
+.checkout {
+   .checkout-container {
+      .form-control {
+         display: grid;
+      }
+      .form-wrapper {
+         display: grid;
+      }
+      .input-header {
+         display: flex;
+         flex-direction: column;
+
+         small {
+            color: red;
+            font-weight: 600;
+         }
+         .title {
+            text-transform: uppercase;
+         }
+      }
+      input,
+      select {
+         padding-left: 10px;
+         padding-top: 5px;
+         padding: 5px 10px 0px 10px;
+         height: 40px;
+         font-size: 16px;
+         font-family: "Poppins", sans-serif;
+         outline: none;
+         border: 1px solid #e1e1e1;
+         margin-bottom: 20px;
+         border-radius: 5px;
+      }
+      .personal-details-container {
+         .personal-details-data {
+            display: grid;
+         }
+      }
+      .shipping-details-container {
+         .shipping-details-data {
+            select {
+               background-color: white;
+               outline: none;
+
+               option {
+                  outline: none;
+                  border: none;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width: 954px) {
+   .checkout {
+      .personal-details-data {
+         //  display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 10px;
+      }
+      .form-wrapper {
+         grid-template-columns: 1fr 1.5fr;
+         gap: 20px;
+         .form-control {
+            margin-top: 20px;
+         }
+      }
+   }
+}
