@@ -30,6 +30,7 @@
          border: 1px solid #e1e1e1;
          margin-bottom: 20px;
          border-radius: 5px;
+         width: 100%;
       }
       .personal-details-container {
          .personal-details-data {
@@ -54,16 +55,15 @@
 
 @media (min-width: 954px) {
    .checkout {
-      .personal-details-data {
-         //  display: grid;
-         grid-template-columns: 1fr 1fr;
-         gap: 10px;
-      }
       .form-wrapper {
-         grid-template-columns: 1fr 1.5fr;
+         grid-template-columns: 1fr 2fr;
          gap: 20px;
          .form-control {
             margin-top: 20px;
+         }
+         .form-control {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
          }
       }
    }

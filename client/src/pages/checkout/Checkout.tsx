@@ -3,7 +3,7 @@ import "./checkout.scss";
 const Checkout: React.FC = () => {
    return (
       <section className="checkout">
-         <div className="bd-container checkout-container ">
+         <div className="bd-container checkout-container section">
             <div className="personal-details-container form-wrapper">
                <div className="input-header">
                   <small>01</small>

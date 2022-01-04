@@ -28,7 +28,6 @@ const Login: React.FC = () => {
    // handle login
    const handleLogin = () => {
       dispatch(login(input));
-      // nav(-1);
    };
 
    const isLoggedIn = useSelector(
