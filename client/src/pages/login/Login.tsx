@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
 import Button from "../../components/button/squareButtons/Button";
 import { login } from "../../redux/actions/auth/authActions";
+import { RootState } from "../../redux/rootReducer";
 import "./Login.scss";
 
 export type loginTypes = {
@@ -15,6 +16,7 @@ const Login: React.FC = () => {
       password: "",
    });
    const nav = useNavigate();
+   const location = useLocation();
    const dispatch = useDispatch();
 
    //handle input onChange
@@ -26,7 +28,17 @@ const Login: React.FC = () => {
    // handle login
    const handleLogin = () => {
       dispatch(login(input));
+      nav(-1);
    };
+
+   const isLoggedIn = useSelector(
+      (state: RootState) => state.authReducer.isLoggedIn
+   );
+   useEffect(() => {
+      if (isLoggedIn) {
+         nav("/");
+      }
+   }, [isLoggedIn, location.pathname, nav]);
 
    return (
       <section className="login">

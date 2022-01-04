@@ -8,6 +8,7 @@ import "./Nav.scss";
 import { RiShoppingBagLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { RootState } from "../../redux/rootReducer";
+import { logout } from "../../redux/actions/auth/authActions";
 const Nav: React.FC = () => {
    const [isOpen, setIsOpen] = useState(false);
    const {
@@ -16,6 +17,8 @@ const Nav: React.FC = () => {
    } = useSelector((state: RootState) => state);
    let totalItems = 0;
    cart.forEach(({ qty }) => (totalItems += qty));
+
+   const dispatch = useDispatch();
 
    return (
       <nav>
@@ -42,17 +45,17 @@ const Nav: React.FC = () => {
                   <li onClick={() => setIsOpen(false)}>
                      {isLoggedIn ? (
                         <Link
-                           onClick={() => console.log("logged out")}
+                           onClick={() => dispatch(logout())}
                            className="account-container"
                            to="/"
                         >
                            <AiOutlineLogout />
-                           <p style={{ fontSize: "13px" }}>logout</p>
+                           {/* <p style={{ fontSize: "13px" }}>logout</p> */}
                         </Link>
                      ) : (
                         <Link className="account-container" to="/login">
                            <VscAccount />
-                           <p style={{ fontSize: "13px" }}>account</p>
+                           {/* <p style={{ fontSize: "13px" }}>account</p> */}
                         </Link>
                      )}
                   </li>

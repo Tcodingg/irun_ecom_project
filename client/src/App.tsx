@@ -30,10 +30,7 @@ function App() {
                <Route path="/product/:id" element={<Product />} />
                <Route path="/cart" element={<Cart />} />
                <Route path="/shop" element={<Shop />} />
-               <Route
-                  path="/login"
-                  element={isLoggedIn ? <Navigate to="/" /> : <Login />}
-               />
+               <Route path="/login" element={<Login />} />
                <Route
                   path="/register"
                   element={isLoggedIn ? <Navigate to="/" /> : <Register />}
