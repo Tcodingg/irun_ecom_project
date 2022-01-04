@@ -8,6 +8,7 @@ import "./Product.scss";
 import ProductSlides from "../../components/ProductSlides/ProductSlides";
 import ProductDetails from "../../components/ProductSlides/productDetails/ProductDetails";
 import { addToCart } from "../../redux/actions/actionCart";
+import Button from "../../components/button/squareButtons/Button";
 
 const Product: React.FC = () => {
    const dispatch = useDispatch();
@@ -32,9 +33,10 @@ const Product: React.FC = () => {
                   <p className="text">{product.details}</p>
                   <p className="text price">{`$${product.price}`}</p>
                   <div className="btn-qty-container">
-                     <button onClick={() => dispatch(addToCart(product))}>
-                        add to cart
-                     </button>
+                     <Button
+                        text="Add To Bag"
+                        handleClick={() => dispatch(addToCart(product))}
+                     />
                   </div>
                   <div className="general-info">
                      <ProductDetails

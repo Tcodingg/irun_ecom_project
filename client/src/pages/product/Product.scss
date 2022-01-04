@@ -11,21 +11,6 @@
                display: flex;
                gap: 0.5rem;
                margin-top: 10px;
-               button {
-                  border: none;
-                  outline: none;
-                  background-color: black;
-                  color: white;
-                  padding: 0.5rem 1rem;
-                  font-weight: 500;
-                  text-transform: capitalize;
-                  transition: all 0.3s ease-out;
-                  font-family: "Poppins", sans-serif;
-                  &:hover {
-                     cursor: pointer;
-                     background-color: rgba(0, 0, 0, 0.801);
-                  }
-               }
             }
             .general-info {
                margin-top: 20px;
