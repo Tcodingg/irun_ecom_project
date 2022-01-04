@@ -36,7 +36,7 @@ const Login: React.FC = () => {
    );
    useEffect(() => {
       if (isLoggedIn) {
-         nav("/");
+         nav(-1);
       }
    }, [isLoggedIn, location.pathname, nav]);
 

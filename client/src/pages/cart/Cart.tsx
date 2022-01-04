@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import CartItem from "../../components/cartItem/CartItem";
 import { RootState } from "../../redux/rootReducer";
 import "./Cart.scss";
+import { Link } from "react-router-dom";
 
 interface checkoutInterface {
    subTotal: number;
@@ -72,7 +73,7 @@ const Cart: React.FC = () => {
                   </div>
                </div>
                <div className="checkout-btn-container">
-                  <a href="##">check out</a>
+                  <Link to="/checkout">check out</Link>
                </div>
             </div>
          </div>
