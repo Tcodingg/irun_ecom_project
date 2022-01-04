@@ -1,3 +1,4 @@
+import Button from "../../components/button/squareButtons/Button";
 import "./checkout.scss";
 
 const Checkout: React.FC = () => {
@@ -45,6 +46,9 @@ const Checkout: React.FC = () => {
                   <input type="date" placeholder="expire date" />
                   <input type="number" placeholder="CVC/CVV" />
                </div>
+            </div>
+            <div className="btn-container">
+               <Button text="Make Payment" />
             </div>
          </div>
       </section>

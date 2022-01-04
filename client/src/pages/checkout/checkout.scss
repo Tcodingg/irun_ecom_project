@@ -1,5 +1,15 @@
 .checkout {
    .checkout-container {
+      .btn-container {
+         margin-top: 20px;
+         display: flex;
+         justify-content: end;
+         button {
+            width: 250px;
+            height: 50px;
+         }
+      }
+
       .form-control {
          display: grid;
       }
@@ -55,15 +65,20 @@
 
 @media (min-width: 954px) {
    .checkout {
-      .form-wrapper {
-         grid-template-columns: 1fr 2fr;
-         gap: 20px;
-         .form-control {
-            margin-top: 20px;
-         }
-         .form-control {
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+      .checkout-container {
+         .form-wrapper {
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            .form-control {
+               margin-top: 20px;
+            }
+            .form-control {
+               grid-template-columns: 1fr 1fr;
+               gap: 10px;
+            }
+            .payment-data {
+               grid-template-columns: 1fr 1fr 1fr;
+            }
          }
       }
    }
