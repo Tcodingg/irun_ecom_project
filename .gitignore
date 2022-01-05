@@ -33,3 +33,6 @@ server/data/productsData
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#files
+client.rest
