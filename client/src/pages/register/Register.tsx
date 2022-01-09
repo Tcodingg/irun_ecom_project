@@ -43,13 +43,13 @@ const Register: React.FC = () => {
                />
                <input
                   onChange={handleChange}
-                  type="text"
+                  type="password"
                   placeholder="Password *"
                   name="password"
                />
                <input
                   onChange={handleChange}
-                  type="text"
+                  type="password"
                   placeholder="Confirm Password *"
                   name="confirmPassword"
                />

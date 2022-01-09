@@ -58,7 +58,7 @@ const Login: React.FC = () => {
                   />
                   <input
                      onChange={handleInput}
-                     type="text"
+                     type="password"
                      placeholder="Password *"
                      name="password"
                   />
