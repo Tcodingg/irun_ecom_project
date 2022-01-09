@@ -14,11 +14,17 @@
       .register-content {
          flex-direction: column;
          gap: index.$mg-2;
-         input {
-            padding: index;
-            font-size: 16px;
-            outline: none;
-            padding: 5px;
+         .form-control {
+            width: 100%;
+
+            input {
+               border: 1px solid #e1e1e1;
+               padding: index;
+               font-size: 16px;
+               outline: none;
+               padding: 0.5rem;
+               width: 100%;
+            }
          }
       }
    }

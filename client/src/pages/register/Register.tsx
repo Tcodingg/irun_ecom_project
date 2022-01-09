@@ -29,30 +29,39 @@ const Register: React.FC = () => {
          <div className="bd-container register-container section flex">
             <h2 className="title">sign up using your email address</h2>
             <div className="register-content flex">
-               <input
-                  onChange={handleChange}
-                  type="text"
-                  placeholder="Name *"
-                  name="name"
-               />
-               <input
-                  onChange={handleChange}
-                  type="text"
-                  placeholder="Email *"
-                  name="email"
-               />
-               <input
-                  onChange={handleChange}
-                  type="password"
-                  placeholder="Password *"
-                  name="password"
-               />
-               <input
-                  onChange={handleChange}
-                  type="password"
-                  placeholder="Confirm Password *"
-                  name="confirmPassword"
-               />
+               <div className="form-control">
+                  <input
+                     onChange={handleChange}
+                     type="text"
+                     placeholder="Name *"
+                     name="name"
+                  />
+               </div>
+               <div className="form-control">
+                  <input
+                     onChange={handleChange}
+                     type="text"
+                     placeholder="Email *"
+                     name="email"
+                  />
+               </div>
+
+               <div className="form-control">
+                  <input
+                     onChange={handleChange}
+                     type="password"
+                     placeholder="Password *"
+                     name="password"
+                  />
+               </div>
+               <div className="form-control">
+                  <input
+                     onChange={handleChange}
+                     type="password"
+                     placeholder="Confirm Password *"
+                     name="confirmPassword"
+                  />
+               </div>
                <Button handleClick={handleRegister} text="create an account" />
             </div>
          </div>
