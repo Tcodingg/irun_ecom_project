@@ -11,6 +11,11 @@ const Register: React.FC = () => {
       password: "",
       confirmPassword: "",
    });
+
+   const [isValidName, setIsValidName] = useState(null);
+   const [isValidEmail, setIsValidEmail] = useState(null);
+   const [isValidPassword, setIsValidPassword] = useState(null);
+   const [isValidConfirmPassword, setIsValidConfirmPassword] = useState(null);
    // handle input values
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;
@@ -24,6 +29,7 @@ const Register: React.FC = () => {
    const handleRegister = () => {
       dispatch(register(input));
    };
+
    return (
       <section className="register">
          <div className="bd-container register-container section flex">
@@ -36,6 +42,7 @@ const Register: React.FC = () => {
                      placeholder="Name *"
                      name="name"
                   />
+                  <small>Please enter a valid name!</small>
                </div>
                <div className="form-control">
                   <input
@@ -44,6 +51,7 @@ const Register: React.FC = () => {
                      placeholder="Email *"
                      name="email"
                   />
+                  <small>Please enter a valid email!</small>
                </div>
 
                <div className="form-control">
@@ -53,6 +61,7 @@ const Register: React.FC = () => {
                      placeholder="Password *"
                      name="password"
                   />
+                  <small>Please enter a valid password!</small>
                </div>
                <div className="form-control">
                   <input
@@ -61,6 +70,7 @@ const Register: React.FC = () => {
                      placeholder="Confirm Password *"
                      name="confirmPassword"
                   />
+                  <small>Password did not match!</small>
                </div>
                <Button handleClick={handleRegister} text="create an account" />
             </div>
