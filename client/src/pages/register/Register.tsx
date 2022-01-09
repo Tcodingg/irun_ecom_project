@@ -63,7 +63,27 @@ const Register: React.FC = () => {
    }, [input.name, input.email, input.confirmPassword, input.password]);
    // handle register
    const handleRegister = () => {
-      dispatch(register(input));
+      if (
+         isValidName &&
+         isValidPassword &&
+         isValidEmail &&
+         isValidConfirmPassword
+      ) {
+         dispatch(register(input));
+      }
+
+      if (!isValidName) {
+         setIsValidName(false);
+      }
+      if (!isValidPassword) {
+         setIsValidPassword(false);
+      }
+      if (!isValidEmail) {
+         setIsValidEmail(false);
+      }
+      if (!isValidConfirmPassword) {
+         setIsValidConfirmPassword(false);
+      }
    };
 
    console.log(
