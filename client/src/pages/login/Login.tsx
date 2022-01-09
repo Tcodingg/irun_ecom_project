@@ -71,7 +71,6 @@ const Login: React.FC = () => {
          setIsAuth(false);
       }
    };
-   console.log(isLoggedIn);
 
    useEffect(() => {
       if (isLoggedIn) {

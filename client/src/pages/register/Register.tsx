@@ -86,14 +86,6 @@ const Register: React.FC = () => {
       }
    };
 
-   console.log(
-      isValidPassword,
-      isValidEmail,
-      isValidConfirmPassword,
-      isValidName
-   );
-
-   console.log(input.password);
    return (
       <section className="register">
          <div className="bd-container register-container section flex">
