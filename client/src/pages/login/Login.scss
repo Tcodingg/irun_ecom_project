@@ -19,10 +19,31 @@ $max-width: 445px;
          .login-content {
             flex-direction: column;
             gap: index.$mg-2;
-            input {
-               padding: 5px;
-               outline: none;
-               font-size: 16px;
+            position: relative;
+            .auth-message {
+               position: absolute;
+               left: 0;
+               top: -14px;
+               font-size: 10px;
+            }
+            .form-control {
+               width: 100%;
+               position: relative;
+               input {
+                  padding: 5px;
+                  outline: none;
+                  font-size: 16px;
+                  width: 100%;
+                  outline: none;
+                  border: 1px solid #e1e1e1;
+                  padding: 0.5rem;
+               }
+               small {
+                  font-size: 10px;
+                  position: absolute;
+                  left: 2px;
+                  bottom: -15px;
+               }
             }
          }
       }

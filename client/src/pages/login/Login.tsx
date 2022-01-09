@@ -15,6 +15,11 @@ const Login: React.FC = () => {
       email: "",
       password: "",
    });
+
+   const [isValidEmail, setIsValidEmail] = useState<any>(null);
+   const [isValidPassword, setIsValidPassword] = useState<any>(null);
+   const [isAuth, setIsAuth] = useState<any>(null);
+
    const nav = useNavigate();
    const location = useLocation();
    const dispatch = useDispatch();
@@ -25,14 +30,49 @@ const Login: React.FC = () => {
       setInput({ ...input, [name]: value });
    };
 
-   // handle login
-   const handleLogin = () => {
-      dispatch(login(input));
-   };
-
    const isLoggedIn = useSelector(
       (state: RootState) => state.authReducer.isLoggedIn
    );
+   const regexp =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+   // validate input values
+   useEffect(() => {
+      function validateInput() {
+         // validate email
+         input.email.length === 0
+            ? setIsValidEmail(null)
+            : regexp.test(input.email)
+            ? setIsValidEmail(true)
+            : setIsValidEmail(false);
+
+         // validate phone
+         input.password.length === 0
+            ? setIsValidPassword(null)
+            : input.password.length > 6
+            ? setIsValidPassword(true)
+            : setIsValidPassword(false);
+      }
+      validateInput();
+   }, [input.email, input.password]);
+
+   // handle login
+   const handleLogin = () => {
+      if (isValidEmail && isValidPassword) {
+         dispatch(login(input));
+      }
+      if (!isValidEmail) {
+         setIsValidEmail(false);
+      }
+      if (!isValidPassword) {
+         setIsValidPassword(false);
+      }
+      if (!isLoggedIn) {
+         setIsAuth(false);
+      }
+   };
+   console.log(isLoggedIn);
+
    useEffect(() => {
       if (isLoggedIn) {
          nav(-1);
@@ -50,18 +90,39 @@ const Login: React.FC = () => {
                   </p>
                </div>
                <div className="login-content flex">
-                  <input
-                     onChange={handleInput}
-                     type="text"
-                     placeholder="Email *"
-                     name="email"
-                  />
-                  <input
-                     onChange={handleInput}
-                     type="password"
-                     placeholder="Password *"
-                     name="password"
-                  />
+                  {isAuth === false ? (
+                     <small className="auth-message">
+                        Invalid email/password
+                     </small>
+                  ) : (
+                     ""
+                  )}
+                  <div className="form-control">
+                     <input
+                        onChange={handleInput}
+                        type="text"
+                        placeholder="Email *"
+                        name="email"
+                     />
+                     {isValidEmail === false ? (
+                        <small>Please enter a valid email!</small>
+                     ) : (
+                        ""
+                     )}
+                  </div>
+                  <div className="form-control">
+                     <input
+                        onChange={handleInput}
+                        type="password"
+                        placeholder="Password *"
+                        name="password"
+                     />
+                     {isValidPassword === false ? (
+                        <small>Please enter a valid password!</small>
+                     ) : (
+                        ""
+                     )}
+                  </div>
                   <Button handleClick={handleLogin} text="sign in" />
                </div>
             </div>
